@@ -7,10 +7,24 @@ import staff from '../../assets/staff.png';
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);  // State to track menu visibility
+    const [aboutOpen, setAboutOpen] = useState(false); // State to track About submenu visibility
+    const [servicesOpen, setServicesOpen] = useState(false); // State to track Services submenu visibility
 
     // Toggle the menu visibility
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    };
+
+    // Toggle About submenu visibility
+    const toggleAbout = (event) => {
+        event.preventDefault();  // Prevent the page from refreshing
+        setAboutOpen(!aboutOpen);
+    };
+
+    // Toggle Services submenu visibility
+    const toggleServices = (event) => {
+        event.preventDefault();  // Prevent the page from refreshing
+        setServicesOpen(!servicesOpen);
     };
 
     return (
@@ -50,7 +64,6 @@ function Header() {
                     </button>
                 </section>
 
-
                 <section className='flex border-b bg-white font-sans min-h-[70px] tracking-wide relative z-50 sticky-header'>
                     <div className='flex flex-wrap items-center justify-between sm:px-10 px-4 py-3 gap-4 w-full max-w-screen-xl mx-auto'>
                         <a href=""><img src={logo} alt="logo" className='w-44 h-16' /></a>
@@ -71,85 +84,71 @@ function Header() {
                         {/* Mobile Menu */}
                         <div
                             id="collapseMenu"
-                            className={`lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50 ${menuOpen ? 'max-lg:block' : 'max-lg:hidden'}`}  // Add classNamees to show or hide based on state
+                            className={`lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50 ${menuOpen ? 'max-lg:block' : 'max-lg:hidden'}`}
                         >
-                            <ul className='lg:flex lg:gap-x-10 max-lg:space-y-3'>
-                                {/* Your menu items */}
-                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</a></li>
+                            <ul className='lg:flex lg:gap-x-10 max-lg:space-y-3 text-left'>
+                                <li className='max-lg:border-b max-lg:py-3'>
+                                    <a href='' className='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</a>
+                                </li>
 
-
+                                {/* About Menu item */}
                                 <li className='group relative'>
-                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'>About</a>
-                                    <ul className='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                                    <a
+                                        href='#' // Prevent default behavior
+                                        className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'
+                                        onClick={toggleAbout} // Toggle visibility of the "About" menu
+                                    >
+                                        About
+                                    </a>
+                                    <ul
+                                        className={`absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500 ${aboutOpen ? 'max-lg:block' : 'max-lg:hidden'}`}
+                                    >
                                         <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i><img src={aboutsus} alt="" className='h-5 me-2' />
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={aboutsus} alt="" className='h-5 me-2' />
                                             <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Us</a>
                                         </li>
                                         <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-vial h-5 w-5 text-gray-600 mr-2"></i> <img src={staff} alt="" className='h-5 me-2' />
+                                            <i className="fas fa-vial h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={staff} alt="" className='h-5 me-2' />
                                             <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Our Staff Test</a>
                                         </li>
                                     </ul>
-
-
                                 </li>
 
-
-                                <li className='group relative'>
-                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'>Services</a>
-                                    <ul className='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                                {/* Services Menu item */}
+                                <li className='group relative text-left'>
+                                    <a
+                                        href='#' // Prevent default behavior
+                                        className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'
+                                        onClick={toggleServices} // Toggle visibility of the "Services" menu
+                                    >
+                                        Services
+                                    </a>
+                                    <ul
+                                        className={`absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500 ${servicesOpen ? 'max-lg:block' : 'max-lg:hidden'}`}
+                                    >
                                         <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i><img src={nurse} alt="" className='h-5 me-2' />
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={nurse} alt="" className='h-5 me-2' />
                                             <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Nursing Services</a>
                                         </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-vial h-5 w-5 text-gray-600 mr-2"></i> {/* Patholab Test icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Patholab Test</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-truck h-5 w-5 text-gray-600 mr-2"></i> {/* Medicine Delivery icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medicine Delivery</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-cogs h-5 w-5 text-gray-600 mr-2"></i> {/* Medical Equipment icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Equipment</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-hand-holding-medical h-5 w-5 text-gray-600 mr-2"></i> {/* Physiotherapy icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Physiotherapy</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-truck-medical h-5 w-5 text-gray-600 mr-2"></i> {/* Medical Transport icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Transport</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-user h-5 w-5 text-gray-600 mr-2"></i> {/* Home Attendant icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Home Attendant</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-ambulance h-5 w-5 text-gray-600 mr-2"></i> {/* Ambulance Service icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Ambulance Service</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-heartbeat h-5 w-5 text-gray-600 mr-2"></i> {/* Critical Care icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Critical Care</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-users h-5 w-5 text-gray-600 mr-2"></i> {/* Senior Citizen icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Senior Citizen</a>
-                                        </li>
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-phone h-5 w-5 text-gray-600 mr-2"></i> {/* Doctor Consultation icon */}
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Doctor Consultation</a>
-                                        </li>
                                     </ul>
-
-
                                 </li>
-                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Gallery</a></li>
-                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Member Registration</a></li>
-                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Career</a></li>
-                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Enquiry Now</a></li>
+
+                                {/* Other menu items */}
+                                <li className='max-lg:border-b max-lg:py-3'>
+                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Gallery</a>
+                                </li>
+                                <li className='max-lg:border-b max-lg:py-3'>
+                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Member Registration</a>
+                                </li>
+                                <li className='max-lg:border-b max-lg:py-3'>
+                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Career</a>
+                                </li>
+                                <li className='max-lg:border-b max-lg:py-3'>
+                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Enquiry Now</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
