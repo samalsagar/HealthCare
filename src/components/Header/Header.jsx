@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import './Header.css';
 import logo from '../../assets/hospitalLogo.png';
-import nurse from '../../assets/nurse.png';
+
 import aboutsus from '../../assets/aboutus.png';
 import staff from '../../assets/staff.png';
-
+import nurse from '../../assets/nurse.png';
+import patholab from '../../assets/patholab.png';
+import medicine from '../../assets/medicine.png';
+import equipment from '../../assets/equipment.png';
+import therapy from '../../assets/therapy.png';
+import transport from '../../assets/transport.png';
+import attendant from '../../assets/attendant.png';
+import ambulance from '../../assets/ambulance.png';
+import care from '../../assets/critical.png';
+import citizen from '../../assets/citizen.png';
+import doctor from '../../assets/doctor.png';
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);  // State to track menu visibility
     const [aboutOpen, setAboutOpen] = useState(false); // State to track About submenu visibility
@@ -132,6 +142,66 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={nurse} alt="" className='h-5 me-2' />
                                             <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Nursing Services</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={patholab} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Patholab Test </a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={medicine} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medicine Deliver</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={equipment} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Equipment</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={therapy} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Physiotherapy</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={transport} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Transport</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={attendant} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Home Attendant</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={ambulance} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Ambulance Service</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={care} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Critical Care</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={citizen} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Senior Citizen</a>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={doctor} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Doctor Consultation </a>
                                         </li>
                                     </ul>
                                 </li>
