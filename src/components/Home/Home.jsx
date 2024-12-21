@@ -1,6 +1,7 @@
 import React from 'react';
 import hero from '../../assets/hero1.mp4';
 import OurService from '../OurService/OurService';
+import Welcome from '../Welcome/Welcome';
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
         />
       </div>
       <OurService />
+      <Welcome />
     </>
   );
 }
