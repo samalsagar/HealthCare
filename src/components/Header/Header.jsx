@@ -1,10 +1,22 @@
-import React from 'react'
-import './Header.css'
+import React, { useState } from 'react';
+import './Header.css';
+import logo from '../../assets/hospitalLogo.png';
+import nurse from '../../assets/nurse.png';
+import aboutsus from '../../assets/aboutus.png';
+import staff from '../../assets/staff.png';
+
 function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);  // State to track menu visibility
+
+    // Toggle the menu visibility
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <div>
             <header className='font-[sans-serif] min-h-[60px] tracking-wide relative z-50'>
-                <section className="bg-[#004d66] min-h-[40px] px-4 py-2 sm:px-10 flex items-center max-sm:flex-col">
+                <section className="hidden lg:flex bg-[#004d66] min-h-[40px] px-4 py-2 sm:px-10 items-center">
                     <button type="button" className="text-white text-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="#fff" className="mr-3 inline-block"
                             viewBox="0 0 482.6 482.6">
@@ -15,8 +27,9 @@ function Header() {
                         +180-548-2588
                     </button>
 
-                    <span className="border-l h-3 mx-6 max-sm:hidden"></span>
-                    <button type="button" className="text-white text-sm max-sm:my-2">
+                    <span className="border-l h-3 mx-6"></span>
+
+                    <button type="button" className="text-white text-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="#fff" className="mr-3 inline-block"
                             viewBox="0 0 479.058 479.058">
                             <path
@@ -26,120 +39,124 @@ function Header() {
                         info@example.com
                     </button>
 
-                    <span className="border-l h-3 mx-6 max-sm:hidden"></span>
-                        <button type="button" className="text-white text-sm max-sm:my-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="#fff" className="mr-3 inline-block"
-                                viewBox="0 0 24 24">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 4 7 11 7 11s7-7 7-11c0-3.87-3.13-7-7-7zm0 10c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
-                            </svg>
-                            1234 Test Address, Test Address
-                        </button>
+                    <span className="border-l h-3 mx-6"></span>
 
-                 
-
+                    <button type="button" className="text-white text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="#fff" className="mr-3 inline-block"
+                            viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 4 7 11 7 11s7-7 7-11c0-3.87-3.13-7-7-7zm0 10c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+                        </svg>
+                        1234 Test Address, Test Address
+                    </button>
                 </section>
 
 
                 <section className='flex border-b bg-white font-sans min-h-[70px] tracking-wide relative z-50 sticky-header'>
                     <div className='flex flex-wrap items-center justify-between sm:px-10 px-4 py-3 gap-4 w-full max-w-screen-xl mx-auto'>
-                        <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-32' />
-                        </a>
+                        <a href=""><img src={logo} alt="logo" className='w-44 h-16' /></a>
 
-                        <div id="collapseMenu"
-                            className='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
-                            <button id="toggleClose" className='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border'>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 fill-black" viewBox="0 0 320.591 320.591">
-                                    <path
-                                        d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                                        data-original="#000000"></path>
-                                    <path
-                                        d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                                        data-original="#000000"></path>
-                                </svg>
-                            </button>
+                        {/* Mobile Menu Toggle Button */}
+                        <button
+                            id="toggleOpen"
+                            className='lg:hidden'
+                            onClick={toggleMenu}  // Trigger toggleMenu on click
+                        >
+                            <svg className="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clipRule="evenodd"></path>
+                            </svg>
+                        </button>
 
-                            <ul
-                                className='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
-                                <li className='mb-6 hidden max-lg:block'>
-                                    <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' />
-                                    </a>
-                                </li>
-                                <li className='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                                    className='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</a></li>
-                                <li className='group max-lg:border-b max-lg:py-3 relative'>
-                                    <a href='javascript:void(0)'
-                                        className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'>Services<svg
-                                            xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" className="ml-1 inline-block"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
-                                                data-name="16" data-original="#000000" />
-                                        </svg>
-                                    </a>
-                                    <ul
-                                        className='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-                                        <li className='border-b py-2 '><a href='javascript:void(0)'
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Service1</a></li>
-                                        <li className='border-b py-2 '><a href='javascript:void(0)'
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Service2</a></li>
-                                        <li className='border-b py-2 '><a href='javascript:void(0)'
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Service2</a></li>
-                                        <li className='border-b py-2 '><a href='javascript:void(0)'
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Service3</a></li>
-                                        <li className='border-b py-2 '><a href='javascript:void(0)'
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Service4</a></li>
-                                    </ul>
-                                </li>
-                                <li className='group max-lg:border-b max-lg:py-3 relative'>
-                                    <a href='javascript:void(0)'
-                                        className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'>Blog<svg
-                                            xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" className="ml-1 inline-block"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
-                                                data-name="16" data-original="#000000" />
-                                        </svg>
-                                    </a>
-                                    <ul
-                                        className='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-                                        <li className='border-b py-2 '><a href='javascript:void(0)'
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Foods</a></li>
-                                        <li className='border-b py-2 '>
-                                            <a href='javascript:void(0)'
-                                                className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Sale</a>
+                        {/* Mobile Menu */}
+                        <div
+                            id="collapseMenu"
+                            className={`lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50 ${menuOpen ? 'max-lg:block' : 'max-lg:hidden'}`}  // Add classNamees to show or hide based on state
+                        >
+                            <ul className='lg:flex lg:gap-x-10 max-lg:space-y-3'>
+                                {/* Your menu items */}
+                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</a></li>
+
+
+                                <li className='group relative'>
+                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'>About</a>
+                                    <ul className='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i><img src={aboutsus} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Us</a>
                                         </li>
-                                        <li className='border-b py-2 '><a href='javascript:void(0)'
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Marketing</a></li>
-                                        <li className='border-b py-2 '><a href='javascript:void(0)'
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Investment</a></li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-vial h-5 w-5 text-gray-600 mr-2"></i> <img src={staff} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Our Staff Test</a>
+                                        </li>
                                     </ul>
+
+
                                 </li>
-                                <li className='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                                    className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Team</a></li>
-                                <li className='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                                    className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About</a></li>
-                                <li className='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
-                                    className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Contact</a></li>
+
+
+                                <li className='group relative'>
+                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'>Services</a>
+                                    <ul className='absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i><img src={nurse} alt="" className='h-5 me-2' />
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Nursing Services</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-vial h-5 w-5 text-gray-600 mr-2"></i> {/* Patholab Test icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Patholab Test</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-truck h-5 w-5 text-gray-600 mr-2"></i> {/* Medicine Delivery icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medicine Delivery</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-cogs h-5 w-5 text-gray-600 mr-2"></i> {/* Medical Equipment icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Equipment</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-hand-holding-medical h-5 w-5 text-gray-600 mr-2"></i> {/* Physiotherapy icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Physiotherapy</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-truck-medical h-5 w-5 text-gray-600 mr-2"></i> {/* Medical Transport icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Transport</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-user h-5 w-5 text-gray-600 mr-2"></i> {/* Home Attendant icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Home Attendant</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-ambulance h-5 w-5 text-gray-600 mr-2"></i> {/* Ambulance Service icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Ambulance Service</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-heartbeat h-5 w-5 text-gray-600 mr-2"></i> {/* Critical Care icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Critical Care</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-users h-5 w-5 text-gray-600 mr-2"></i> {/* Senior Citizen icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Senior Citizen</a>
+                                        </li>
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-phone h-5 w-5 text-gray-600 mr-2"></i> {/* Doctor Consultation icon */}
+                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Doctor Consultation</a>
+                                        </li>
+                                    </ul>
+
+
+                                </li>
+                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Gallery</a></li>
+                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Member Registration</a></li>
+                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Career</a></li>
+                                <li className='max-lg:border-b max-lg:py-3'><a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Enquiry Now</a></li>
                             </ul>
-                        </div>
-
-                        <div className='flex max-lg:ml-auto space-x-4'>
-                            <button className='btn'> Reach to Us!
-                            </button>
-
-                            <button id="toggleOpen" className='lg:hidden'>
-                                <svg className="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd"
-                                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                        clipRule="evenodd"></path>
-                                </svg>
-                            </button>
                         </div>
                     </div>
                 </section>
             </header>
         </div>
-    )
+    );
 }
 
-export default Header
+export default Header;
