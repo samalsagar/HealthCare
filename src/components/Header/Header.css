@@ -1,0 +1,99 @@
+/* From Uiverse.io by alexroumi */ 
+.btn {
+    padding: 10px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: rgb(115, 115, 228);
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   .btn:hover {
+    color: #e8e8e8;
+   }
+   
+   .btn:hover::before {
+    width: 100%;
+   }
+
+   /* Style adjustments for header */
+header {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+
+  
+  .text-white {
+    color: white; /* Ensure text is readable */
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    /* background-color: rgba(121, 142, 234, 0.1);  */
+    background-color: rgb(72, 72, 157);
+  }
+  
+  /* Ensure flex container stays in one line */
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap; /* Prevent wrapping of buttons */
+  }
+  
+  /* Mobile responsiveness */
+  @media screen and (max-width: 640px) {
+    section {
+      flex-direction: row; /* Ensure horizontal layout on mobile */
+      justify-content: flex-start; /* Align items to the left */
+    }
+  
+    .max-sm\:my-2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+    .border-l {
+      display: inline-block; /* Keep divider visible */
+      height: 24px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensures the header is above other content */
+    width: 100%;
+}
+
+  
