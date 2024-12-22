@@ -2,6 +2,8 @@ import React from 'react';
 import hero from '../../assets/hero1.mp4';
 import OurService from '../OurService/OurService';
 import Welcome from '../Welcome/Welcome';
+import Review from '../Review/Review';
+import Team from '../Team/Team';
 
 function Home() {
   return (
@@ -22,7 +24,9 @@ function Home() {
         />
       </div>
       <OurService />
+      <Review />
       <Welcome />
+      <Team />
     </>
   );
 }

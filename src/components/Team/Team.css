@@ -1,0 +1,118 @@
+/* Styling for the overall container of the team section */
+.team-container {
+    margin-top: 40px;
+  }
+  
+  /* Font styling for the content */
+  .team-content {
+    font-family: sans-serif;
+  }
+  
+  /* Styling for the heading container */
+  .team-heading {
+    max-width: 2xl;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Title for the team section */
+  .team-title {
+    color: #2D3748;
+    font-size: 2.25rem;
+    font-weight: 800;
+  }
+  
+  /* Subtitle below the title */
+  .team-subtitle {
+    color: #4A5568;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    line-height: 1.75;
+  }
+  
+  /* Styling for the grid containing the team members */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    max-width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Styling for each team member */
+  .team-member {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Hover effect for the team member container */
+  .team-member:hover {
+    transform: translateY(-5px); /* Hover effect */
+  }
+  
+  /* Styling for the images of the team members */
+  .team-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e2e8f0;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for the images */
+  .team-img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Styling for the name and role text */
+  .team-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a202c;
+  }
+  
+  .team-role {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-top: 4px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1024px) {
+    .team-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Keyframe animation for fade-in effect */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

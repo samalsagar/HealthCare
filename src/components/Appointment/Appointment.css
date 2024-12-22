@@ -1,0 +1,120 @@
+/* Container for Human Icon and Appointment Text */
+.human-icon-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
+  background-color: #007bff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 18px;
+}
+
+.human-icon {
+  font-size: 28px; /* Icon size */
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.appointment-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Appointment Form Box */
+.chatbot-box {
+  position: fixed;
+  bottom: 20px;
+  right: -350px; /* Start from the right, hidden */
+  width: 350px;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 10000;
+  transition: all 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* When the 'active' class is added, make the chatbot visible */
+.chatbot-box.active {
+  right: 20px; /* Position when active */
+}
+
+/* Close Button for the Appointment Box */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Content inside the appointment box */
+.chatbot-content {
+  flex-grow: 1;
+}
+
+.chatbot-header {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.chatbot-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-form input,
+.chatbot-form select,
+.chatbot-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.chatbot-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  /* padding-bottom: 1px; */
+  padding: 5px;
+}
+
+.chatbot-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the select dropdown */
+.chatbot-form select {
+  height: 44px;
+  font-size: 14px;
+}
+
+/* Styling for the textarea */
+.chatbot-form textarea {
+  height: 100px;
+  resize: vertical;
+}

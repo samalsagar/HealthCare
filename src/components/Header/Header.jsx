@@ -1,15 +1,14 @@
 import React, { useState,useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/hospitalLogo.png';
-// import demo from '../.../assets/demmo.png';
 import aboutsus from '../../assets/aboutus.png';
 import staff from '../../assets/staff.png';
 import nurse from '../../assets/nurse.png';
 import patholab from '../../assets/patholab.png';
 import medicine from '../../assets/medicine.png';
-import equipment from '../../assets/equipment.png';
+import baby from '../../assets/baby.png';
 import therapy from '../../assets/therapy.png';
-import transport from '../../assets/transport.png';
+import preg from '../../assets/preg.png';
 import attendant from '../../assets/attendant.png';
 import ambulance from '../../assets/ambulance.png';
 import care from '../../assets/critical.png';
@@ -17,6 +16,7 @@ import citizen from '../../assets/citizen.png';
 import doctor from '../../assets/doctor.png';
 
 import Modal from '../Modal/Modal'; 
+import { Link } from 'react-router-dom';
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);  // State to track menu visibility
     const [aboutOpen, setAboutOpen] = useState(false); // State to track About submenu visibility
@@ -38,6 +38,10 @@ function Header() {
     const toggleServices = (event) => {
         event.preventDefault();  // Prevent the page from refreshing
         setServicesOpen(!servicesOpen);
+    };
+
+    const closeMenuAndNavigate = () => {
+        setMenuOpen(false); // Close the menu
     };
 
      // Open the modal on component mount
@@ -89,7 +93,7 @@ function Header() {
 
                 <section className='flex border-b bg-white font-sans min-h-[70px] tracking-wide relative z-50 sticky-header'>
                     <div className='flex flex-wrap items-center justify-between sm:px-10 px-4 py-3 gap-4 w-full max-w-screen-xl mx-auto'>
-                        <a href=""><img src={logo} alt="logo" className='w-44 h-16' /></a>
+                        <Link href=""><img src={logo} alt="logo" className='w-44 h-16' /></Link>
 
                         {/* Mobile Menu Toggle Button */}
                         <button
@@ -111,126 +115,144 @@ function Header() {
                         >
                             <ul className='lg:flex lg:gap-x-10 max-lg:space-y-3 text-left'>
                                 <li className='max-lg:border-b max-lg:py-3'>
-                                    <a href='' className='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</a>
+                                    <Link to='/' 
+                                    onClick={closeMenuAndNavigate}
+                                    className='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</Link>
                                 </li>
 
                                 {/* About Menu item */}
                                 <li className='group relative max-lg:border-b max-lg:py-3'>
-                                    <a
+                                    <Link
                                         href='#' // Prevent default behavior
                                         className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'
                                         onClick={toggleAbout} // Toggle visibility of the "About" menu
                                     >
                                         About
-                                    </a>
+                                    </Link>
                                     <ul
                                         className={`absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500 ${aboutOpen ? 'max-lg:block' : 'max-lg:hidden'}`}
                                     >
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={aboutsus} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Us</a>
+                                            <Link to="aboutus" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Us</Link>
                                         </li>
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-vial h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={staff} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Our Staff Test</a>
+                                            <Link to="staff" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Our Staff</Link>
                                         </li>
                                     </ul>
                                 </li>
 
                                 {/* Services Menu item */}
                                 <li className='group relative text-left max-lg:border-b max-lg:py-3'>
-                                    <a
+                                    <Link
                                         href='#' // Prevent default behavior
                                         className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'
                                         onClick={toggleServices} // Toggle visibility of the "Services" menu
                                     >
                                         Services
-                                    </a>
+                                    </Link>
                                     <ul
                                         className={`absolute shadow-lg bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500 ${servicesOpen ? 'max-lg:block' : 'max-lg:hidden'}`}
                                     >
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={nurse} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Nursing Services</a>
+                                            <Link to="nurse" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Nursing Services</Link>
                                         </li>
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={patholab} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Patholab Test </a>
+                                            <Link to="patholab" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Patholab Test </Link>
                                         </li>
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={medicine} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medicine Deliver</a>
-                                        </li>
-
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={equipment} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Equipment</a>
+                                            <img src={baby} alt="" className='h-5 me-2' />
+                                            <Link to="babycare" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Baby Care</Link>
                                         </li>
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={therapy} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Physiotherapy</a>
+                                            <Link to="physiotherapy" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Physiotherapy</Link>
                                         </li>
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={transport} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Transport</a>
+                                            <img src={preg} alt="" className='h-5 me-2' />
+                                            <Link to="pregnancycare" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Pregnancy Care</Link>
                                         </li>
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={attendant} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Home Attendant</a>
-                                        </li>
-
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={ambulance} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Ambulance Service</a>
+                                            <Link to="homeattendant" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Home Attendant</Link>
                                         </li>
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={care} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Critical Care</a>
+                                            <Link to="criticalcare" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Critical Care</Link>
                                         </li>
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={citizen} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Senior Citizen</a>
+                                            <Link to="siniorcare" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Senior Citizen</Link>
                                         </li>
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={doctor} alt="" className='h-5 me-2' />
-                                            <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Doctor Consultation </a>
+                                            <Link to="doctor" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Doctor Consultation </Link>
                                         </li>
                                     </ul>
                                 </li>
 
                                 {/* Other menu items */}
                                 <li className='max-lg:border-b max-lg:py-3'>
-                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Gallery</a>
+                                    <Link to='gallery' 
+                                    onClick={closeMenuAndNavigate}
+                                    className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Gallery</Link>
                                 </li>
                                 {/* <li className='max-lg:border-b max-lg:py-3'>
-                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Member Registration</a>
+                                    <Link href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Member Registration</Link>
                                 </li> */}
                                 <li className='max-lg:border-b max-lg:py-3'>
-                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Career</a>
+                                    <Link to='carrer' 
+                                    onClick={closeMenuAndNavigate}
+                                    className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Career</Link>
                                 </li>
                                 <li className='max-lg:border-b max-lg:py-3'>
-                                    <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Enquiry Now</a>
+                                    <Link to='enquiry' 
+                                    onClick={closeMenuAndNavigate}
+                                    className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Enquiry Now</Link>
                                 </li>
                             </ul>
                         </div>
