@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/hospitalLogo.png';
-
+// import demo from '../.../assets/demmo.png';
 import aboutsus from '../../assets/aboutus.png';
 import staff from '../../assets/staff.png';
 import nurse from '../../assets/nurse.png';
@@ -15,10 +15,13 @@ import ambulance from '../../assets/ambulance.png';
 import care from '../../assets/critical.png';
 import citizen from '../../assets/citizen.png';
 import doctor from '../../assets/doctor.png';
+
+import Modal from '../Modal/Modal'; 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);  // State to track menu visibility
     const [aboutOpen, setAboutOpen] = useState(false); // State to track About submenu visibility
     const [servicesOpen, setServicesOpen] = useState(false); // State to track Services submenu visibility
+    const [modalOpen, setModalOpen] = useState(false); 
 
     // Toggle the menu visibility
     const toggleMenu = () => {
@@ -35,6 +38,16 @@ function Header() {
     const toggleServices = (event) => {
         event.preventDefault();  // Prevent the page from refreshing
         setServicesOpen(!servicesOpen);
+    };
+
+     // Open the modal on component mount
+     useEffect(() => {
+        setModalOpen(true); // Open the modal when the component is mounted
+    }, []);
+
+    // Close modal function
+    const closeModal = () => {
+        setModalOpen(false);
     };
 
     return (
@@ -102,7 +115,7 @@ function Header() {
                                 </li>
 
                                 {/* About Menu item */}
-                                <li className='group relative'>
+                                <li className='group relative max-lg:border-b max-lg:py-3'>
                                     <a
                                         href='#' // Prevent default behavior
                                         className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'
@@ -127,7 +140,7 @@ function Header() {
                                 </li>
 
                                 {/* Services Menu item */}
-                                <li className='group relative text-left'>
+                                <li className='group relative text-left max-lg:border-b max-lg:py-3'>
                                     <a
                                         href='#' // Prevent default behavior
                                         className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block'
@@ -210,9 +223,9 @@ function Header() {
                                 <li className='max-lg:border-b max-lg:py-3'>
                                     <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Gallery</a>
                                 </li>
-                                <li className='max-lg:border-b max-lg:py-3'>
+                                {/* <li className='max-lg:border-b max-lg:py-3'>
                                     <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Member Registration</a>
-                                </li>
+                                </li> */}
                                 <li className='max-lg:border-b max-lg:py-3'>
                                     <a href='' className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Career</a>
                                 </li>
@@ -223,6 +236,7 @@ function Header() {
                         </div>
                     </div>
                 </section>
+                <Modal isOpen={modalOpen} onClose={closeModal} />
             </header>
         </div>
     );

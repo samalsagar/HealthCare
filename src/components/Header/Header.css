@@ -56,11 +56,6 @@ header {
     transition: background-color 0.3s ease;
   }
   
-  button:hover {
-    /* background-color: rgba(121, 142, 234, 0.1);  */
-    background-color: rgb(72, 72, 157);
-  }
-  
   /* Ensure flex container stays in one line */
   section {
     display: flex;
