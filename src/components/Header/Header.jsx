@@ -5,7 +5,7 @@ import aboutsus from '../../assets/aboutus.png';
 import staff from '../../assets/staff.png';
 import nurse from '../../assets/nurse.png';
 import patholab from '../../assets/patholab.png';
-import baby from '../../assets/babyaby.png';
+import baby from '../../assets/Baby.png';
 import therapy from '../../assets/therapy.png';
 import preg from '../../assets/preg.png';
 import attendant from '../../assets/attendant.png';
