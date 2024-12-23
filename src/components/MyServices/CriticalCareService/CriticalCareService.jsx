@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../../../assets/critiCalCareBanner.gif'
+import banner from '../../../assets/criticalCareBanner.gif'
 function CriticalCareService() {
   return (
     <div>
