@@ -1,9 +1,9 @@
 import React from 'react'
-
+import banner from '../../../assets/nursingBanner.gif'; 
 function NurshingService() {
   return (
     <div>
-      Hey I am Nurshing Service
+      <img src={banner} alt="" />
     </div>
   )
 }

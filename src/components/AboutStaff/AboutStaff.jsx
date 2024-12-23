@@ -1,9 +1,9 @@
 import React from 'react'
-
+import banner from '../../assets/staffBanner2.gif'
 function AboutStaff() {
   return (
     <div>
-      Heyy I am About Staff
+     <img src={banner} alt="" />
     </div>
   )
 }

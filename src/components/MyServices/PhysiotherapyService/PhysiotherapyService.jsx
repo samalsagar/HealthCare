@@ -1,9 +1,10 @@
 import React from 'react'
+import banner from '../../../assets/phyBanner.gif'
 
 function PhysiotherapyService() {
   return (
     <div>
-      Hey I am Physiotherapy Service
+      <img src={banner} alt="" /> 
     </div>
   )
 }

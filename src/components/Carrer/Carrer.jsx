@@ -1,9 +1,9 @@
 import React from 'react'
-
+import banner from '../../assets/carrerBanner.gif'
 function Carrer() {
   return (
     <div>
-      Hey I am Carrer
+      <img src={banner} alt="" />
     </div>
   )
 }

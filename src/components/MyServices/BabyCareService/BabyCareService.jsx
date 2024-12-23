@@ -1,9 +1,9 @@
 import React from 'react'
-
+import banner from '../../../assets/babyCare.gif';
 function BabyCareService() {
   return (
     <div>
-      Hey I am Baby Care Service
+      <img src={banner} alt="" />
     </div>
   )
 }

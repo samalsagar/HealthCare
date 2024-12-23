@@ -1,9 +1,9 @@
 import React from 'react'
-
+import banner from '../../../assets/doctorconsultBanner.gif'; 
 function DoctorConsultService() {
   return (
     <div>
-      Hey I am Doctor Consult Service
+      <img src={banner} alt="" />
     </div>
   )
 }

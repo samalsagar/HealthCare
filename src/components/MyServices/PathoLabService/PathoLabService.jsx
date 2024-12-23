@@ -1,9 +1,9 @@
 import React from 'react'
-
+import banner from '../../../assets/labTest.gif'
 function PathoLabService() {
   return (
     <div>
-      Hey I am PathoLab Service
+      <img src={banner} alt="" />
     </div>
   )
 }
