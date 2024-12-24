@@ -58,7 +58,7 @@ function Header() {
             <header className='font-[sans-serif] min-h-[60px] tracking-wide relative z-50'>
                 <section className='flex border-b bg-white font-sans min-h-[70px] tracking-wide relative z-50 sticky-header'>
                     <div className='flex flex-wrap items-center justify-between sm:px-10 px-4 py-3 gap-4 w-full max-w-screen-xl mx-auto'>
-                        <Link href=""><img src={testlogo} alt="logo" className='w- h-20' /></Link>
+                        <Link href=""><img src={testlogo} alt="logo" className='h-14 w-20' /></Link>
 
                         {/* Mobile Menu Toggle Button */}
                         <button
