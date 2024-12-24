@@ -54,9 +54,9 @@ function Header() {
     };
 
     return (
-        <div>
+        <div className=''>
             <header className='font-[sans-serif] min-h-[60px] tracking-wide relative z-50'>
-                <section className="hidden lg:flex bg-[#004d66] min-h-[40px] px-4 py-2 sm:px-10 items-center">
+                {/* <section className="hidden lg:flex bg-[#004d66] min-h-[40px] px-4 py-2 sm:px-10 items-center">
                     <button type="button" className="text-white text-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="#fff" className="mr-3 inline-block"
                             viewBox="0 0 482.6 482.6">
@@ -88,7 +88,7 @@ function Header() {
                         </svg>
                         1234 Test Address, Test Address
                     </button>
-                </section>
+                </section> */}
 
                 <section className='flex border-b bg-white font-sans min-h-[70px] tracking-wide relative z-50 sticky-header'>
                     <div className='flex flex-wrap items-center justify-between sm:px-10 px-4 py-3 gap-4 w-full max-w-screen-xl mx-auto'>

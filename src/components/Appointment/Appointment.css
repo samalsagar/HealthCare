@@ -112,9 +112,3 @@
   height: 44px;
   font-size: 14px;
 }
-
-/* Styling for the textarea */
-.chatbot-form textarea {
-  height: 100px;
-  resize: vertical;
-}
