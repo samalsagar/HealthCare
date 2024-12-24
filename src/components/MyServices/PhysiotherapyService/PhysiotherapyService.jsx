@@ -3,7 +3,7 @@ import banner from '../../../assets/phyBanner.gif'
 
 function PhysiotherapyService() {
   return (
-    <div>
+    <div className='mt-10'>
       <img src={banner} alt="" /> 
     </div>
   )

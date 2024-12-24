@@ -13,9 +13,9 @@ function AppointmentForm() {
 
 
                   <div>
-                    <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
-                      Your Name
-                    </label>
+                    {/* <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
+                      Name
+                    </label> */}
                     <input
                       placeholder="Enter Your Name"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -24,30 +24,66 @@ function AppointmentForm() {
                     />
                   </div>
 
+                  <div>
+                    {/* <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
+                      Patient Name
+                    </label> */}
+                    <input
+                      placeholder="Enter Patient Name"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      id="username"
+                      type="text"
+                    />
+                  </div>
 
                   <div>
-                    <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
-                      Mobile Number
-                    </label>
+                    {/* <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
+                     Age
+                    </label> */}
                     <input
+                      placeholder="Enter Patient Age"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+91 1234567890"
-                      id="number"
-                      type="number"
+                      id="username"
+                      type="text"
                     />
                   </div>
 
 
                   <div>
-                    <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
+                    {/* <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
+                      Mobile Number
+                    </label> */}
+                    <input
+                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Enter Mobile Number"
+                      id="number"
+                      type="number"
+                    />
+                  </div>
+
+                  <div>
+                    {/* <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
+                      Area
+                    </label> */}
+                    <input
+                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Enter Your Area"
+                      id="city"
+                      type="text"
+                    />
+                  </div>
+
+
+                  <div>
+                    {/* <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
                       Choose a Service
-                    </label>
+                    </label> */}
                     <select
                       name="service"
                       id="service"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      <option value="">Choose a Service</option>
+                      <option value="">Choose Service</option>
                       <option value="nursing">Nursing Service</option>
                       <option value="patho_lab_test">Patho Lab Test</option>
                       <option value="baby_care">Baby Care</option>
@@ -61,19 +97,9 @@ function AppointmentForm() {
                   </div>
 
 
-                  <div>
-                    <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
-                      Your City
-                    </label>
-                    <input
-                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter Your City"
-                      id="city"
-                      type="text"
-                    />
-                  </div>
+                  
 
-
+{/* 
                   <div>
                     <label className="block mb-2 text-sm font-medium text-gray-900 text-left">
                       Your Requirement
@@ -85,7 +111,7 @@ function AppointmentForm() {
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Describe your requirements..."
                     ></textarea>
-                  </div>
+                  </div> */}
 
 
                   <button

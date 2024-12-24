@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../assets/hospitalLogo.png'
+import testlogo from '../../assets/testlogo.jpeg';
 function Footer() {
   return (
     <div>
@@ -14,9 +15,8 @@ function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pt-10">
           <div className="lg:col-span-2 max-w-md">
-            <img src={logo} alt="logo" className='lg:w-auto md:w-auto sm:w-full rounded-lg lg:h-24 md:h-24 sm:h-full' />
-            <p className="text-gray-400 text-base text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida,
-              mi eu pulvinar cursus, sem elit interdum mauris.</p>
+            <img src={testlogo} alt="logo" className='lg:w-auto md:w-auto sm:w-full rounded-lg lg:h-24 md:h-24 sm:h-full' />
+            <p className="text-gray-400 text-base text-left">We are committed to delivering high-quality, compassionate, and innovative healthcare services that cater to the diverse needs of individuals and communities. With a focus on holistic care, we offer a comprehensive range of healthcare solutions designed to improve the well-being and quality of life for our clients.</p>
           </div>
 
           <div>
@@ -36,9 +36,9 @@ function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-gray-200">Contact Us</h4>
             <ul className="space-y-4">
-              <li className="text-gray-400 text-base">123 Main Street</li>
-              <li className="text-gray-400 text-base">Test, Odisha, India</li>
-              <li className="text-gray-400 text-base">test@example.com</li>
+              <li className="text-gray-400 text-base">Near Kalinga Studio,Bharatpur</li>
+              <li className="text-gray-400 text-base">Khandagiri, Bhubaneswar- 03</li>
+              <li className="text-gray-400 text-base">admin@homenursingseva.com</li>
               <li className="text-gray-400 text-base">+91 234 567 8290</li>
             </ul>
           </div>
@@ -98,7 +98,7 @@ function Footer() {
       </div>
 
       <div className="bg-gray-900 py-4 px-4 -mx-8 text-center mt-10">
-        <p className='text-gray-400 text-base'>© test. All rights reserved.</p>
+        <p className='text-gray-400 text-base'>©homenursingseva. All rights reserved.</p>
       </div>
     </footer>
     </div>

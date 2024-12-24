@@ -8,7 +8,7 @@ import Team from '../Team/Team';
 function Home() {
   return (
     <>
-      <div className="relative w-full h-auto try">
+      <div className="relative w-full h-auto try mt-7">
         {/* Optionally, you can also add a fallback for browsers that don't support the video */}
 
         <video

@@ -29,19 +29,20 @@
 /* Appointment Form Box */
 .chatbot-box {
   position: fixed;
-  bottom: 20px;
-  right: -350px; /* Start from the right, hidden */
-  width: 350px;
-  height: 400px;
-  background-color: #fff;
-  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  z-index: 10000;
-  transition: all 0.3s ease;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    bottom: 18px;
+    right: -350px;
+    width: 350px;
+    height: 478px;
+    background-color: #fff;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    padding: 20px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* When the 'active' class is added, make the chatbot visible */
