@@ -39,7 +39,7 @@ function Footer() {
               <li className="text-gray-400 text-base">Near Kalinga Studio,Bharatpur</li>
               <li className="text-gray-400 text-base">Khandagiri, Bhubaneswar- 03</li>
               <li className="text-gray-400 text-base">admin@homenursingseva.com</li>
-              <li className="text-gray-400 text-base">+91 234 567 8290</li>
+              <li className="text-gray-400 text-base">+91 7735123124</li>
             </ul>
           </div>
 

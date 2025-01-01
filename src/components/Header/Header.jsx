@@ -1,21 +1,10 @@
 import React, { useState,useEffect } from 'react';
 import './Header.css';
-import logo from '../../assets/hospitalLogo.png';
-import aboutsus from '../../assets/aboutus.png';
-import staff from '../../assets/staff.png';
-import nurse from '../../assets/nurse.png';
-import patholab from '../../assets/patholab.png';
-import baby from '../../assets/Baby.png';
-import therapy from '../../assets/therapy.png';
-import preg from '../../assets/preg.png';
-import attendant from '../../assets/attendant.png';
-import ambulance from '../../assets/ambulance.png';
-import care from '../../assets/critical.png';
-import citizen from '../../assets/citizen.png';
-import doctor from '../../assets/doctor.png';
+
 import testlogo from '../../assets/testlogo.jpeg';
 import Modal from '../Modal/Modal'; 
 import { Link } from 'react-router-dom';
+import importFiles from '../importFiles';
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);  // State to track menu visibility
     const [aboutOpen, setAboutOpen] = useState(false); // State to track About submenu visibility
@@ -99,14 +88,14 @@ function Header() {
                                     >
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={aboutsus} alt="" className='h-5 me-2' />
+                                            <img src={importFiles.aboutus} alt="" className='h-5 me-2' />
                                             <Link to="aboutus" 
                                             onClick={closeMenuAndNavigate}
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Us</Link>
                                         </li>
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-vial h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={staff} alt="" className='h-5 me-2' />
+                                            <img src={importFiles.staff} alt="" className='h-5 me-2' />
                                             <Link to="staff" 
                                             onClick={closeMenuAndNavigate}
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Our Staff</Link>
@@ -128,47 +117,15 @@ function Header() {
                                     >
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={nurse} alt="" className='h-5 me-2' />
+                                            <img src={importFiles.nurse} alt="" className='h-5 me-2' />
                                             <Link to="nurse" 
                                             onClick={closeMenuAndNavigate}
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Nursing Services</Link>
                                         </li>
-
+                                        
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={patholab} alt="" className='h-5 me-2' />
-                                            <Link to="patholab" 
-                                            onClick={closeMenuAndNavigate}
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Patholab Test </Link>
-                                        </li>
-
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={baby} alt="" className='h-5 me-2' />
-                                            <Link to="babycare" 
-                                            onClick={closeMenuAndNavigate}
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Baby Care</Link>
-                                        </li>
-
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={therapy} alt="" className='h-5 me-2' />
-                                            <Link to="physiotherapy" 
-                                            onClick={closeMenuAndNavigate}
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Physiotherapy</Link>
-                                        </li>
-
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={preg} alt="" className='h-5 me-2' />
-                                            <Link to="pregnancycare" 
-                                            onClick={closeMenuAndNavigate}
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Pregnancy Care</Link>
-                                        </li>
-
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={attendant} alt="" className='h-5 me-2' />
+                                            <img src={importFiles.attendant} alt="" className='h-5 me-2' />
                                             <Link to="homeattendant" 
                                             onClick={closeMenuAndNavigate}
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Home Attendant</Link>
@@ -176,23 +133,81 @@ function Header() {
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={care} alt="" className='h-5 me-2' />
+                                            <img src={importFiles.bed} alt="" className='h-5 me-2' />
+                                            <Link to="homeattendant" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Bedside Attendant</Link>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={importFiles.medical} alt="" className='h-5 me-2' />
+                                            <Link to="homeattendant" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Attendant</Link>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={importFiles.seniorcitizen} alt="" className='h-5 me-2' />
+                                            <Link to="siniorcare" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Senior Citizen Care</Link>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={importFiles.preg} alt="" className='h-5 me-2' />
+                                            <Link to="pregnancycare" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Pregnancy Care</Link>
+                                        </li>
+
+
+                                        
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={importFiles.baby} alt="" className='h-5 me-2' />
+                                            <Link to="babycare" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Baby Care</Link>
+                                        </li>
+
+                                        
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={importFiles.patholab} alt="" className='h-5 me-2' />
+                                            <Link to="patholab" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Patholab Test </Link>
+                                        </li>
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={importFiles.therapy} alt="" className='h-5 me-2' />
+                                            <Link to="physiotherapy" 
+                                            onClick={closeMenuAndNavigate}
+                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Physiotherapy</Link>
+                                        </li>
+
+                                       
+
+                                        
+
+                                        <li className='border-b py-2 flex items-center'>
+                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
+                                            <img src={importFiles.criticalcare} alt="" className='h-5 me-2' />
                                             <Link to="criticalcare" 
                                             onClick={closeMenuAndNavigate}
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Critical Care</Link>
                                         </li>
 
-                                        <li className='border-b py-2 flex items-center'>
-                                            <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={citizen} alt="" className='h-5 me-2' />
-                                            <Link to="siniorcare" 
-                                            onClick={closeMenuAndNavigate}
-                                            className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Senior Citizen</Link>
-                                        </li>
+                                        
 
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
-                                            <img src={doctor} alt="" className='h-5 me-2' />
+                                            <img src={importFiles.doctor} alt="" className='h-5 me-2' />
                                             <Link to="doctor" 
                                             onClick={closeMenuAndNavigate}
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Doctor Consultation </Link>
