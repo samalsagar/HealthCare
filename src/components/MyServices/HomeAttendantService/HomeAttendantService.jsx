@@ -1,10 +1,11 @@
 import React from 'react'
-import banner from '../../../assets/homeBanner.gif';
+// import banner from '../../../assets/homeBanner.gif';
+import banner from '../../../assets/MyServicesBanner/homeAttendantBanner.gif'
 import AppointmentForm from '../../AppointmentForm/AppointmentForm';
 import ServiceListBox from '../../ServiceListBox/ServiceListBox';
 function HomeAttendantService() {
   return (
-    <div className='mt-10'>
+    <div className='mt-11'>
       <img src={banner} alt="" />
 
       <div className="grid lg:grid-cols-2 gap-12 lg:max-w-6xl max-w-2xl mx-auto mt-10 px-6 md:px-12">

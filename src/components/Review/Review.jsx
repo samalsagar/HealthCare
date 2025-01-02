@@ -27,7 +27,13 @@ function Review() {
           <div className={`review-card ${isVisible ? 'animate-fadeIn' : ''}`}>
             <div className="review-header">
               <img src={men} className="avatar" alt="client" />
-              <h4 className="client-name">Mr. Prasant</h4>
+              <h4 className="client-name">
+                Mr. Prasant Sasmal
+                <div className="location">
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>Bhubaneswar</span>
+                </div>
+              </h4>
             </div>
             <div className="review-body">
               <p className="review-text">
@@ -39,7 +45,13 @@ function Review() {
           <div className={`review-card ${isVisible ? 'animate-fadeIn' : ''}`}>
             <div className="review-header">
               <img src={men} className="avatar" alt="client" />
-              <h4 className="client-name">Mr. Paresh</h4>
+              <h4 className="client-name">
+                Mr. Paresh Rout
+                <div className="location">
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>Cuttack</span>
+                </div>
+              </h4>
             </div>
             <div className="review-body">
               <p className="review-text">
@@ -51,7 +63,13 @@ function Review() {
           <div className={`review-card ${isVisible ? 'animate-fadeIn' : ''}`}>
             <div className="review-header">
               <img src={female} className="avatar" alt="client" />
-              <h4 className="client-name">Ms. Swati</h4>
+              <h4 className="client-name">
+                Ms. Swati Behera
+                <div className="location">
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>Rourkela</span>
+                </div>
+              </h4>
             </div>
             <div className="review-body">
               <p className="review-text">

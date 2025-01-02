@@ -3,7 +3,7 @@ import banner from '../../assets/staffBanner2.gif'
 import Team from '../Team/Team'
 function AboutStaff() {
   return (
-    <div className='mt-7'>
+    <div className='mt-11'>
      <img src={banner} alt="" />
      <Team />
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import hero from '../../assets/hero1.mp4';
+import hero from '../../assets/mainHero.mp4';
 import OurService from '../OurService/OurService';
 import Welcome from '../Welcome/Welcome';
 import Review from '../Review/Review';
@@ -8,7 +8,7 @@ import Team from '../Team/Team';
 function Home() {
   return (
     <>
-      <div className="relative w-full h-auto try mt-7">
+      <div className="relative w-full h-auto try mt-11">
         {/* Optionally, you can also add a fallback for browsers that don't support the video */}
 
         <video

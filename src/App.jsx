@@ -20,6 +20,8 @@ import DoctorConsultService from './components/MyServices/DoctorConsultService/D
 import Gallery from './components/Gallery/Gallery.jsx'
 import Carrer from './components/Carrer/Carrer.jsx'
 import Enquiry from './components/Enquiry/Enquiry.jsx'
+import BedSideAttendant from './components/MyServices/BedSideAttendant/BedSideAttendant.jsx'
+import MedicalAttendant from './components/MyServices/MedicalAttendant/MedicalAttendant.jsx'
 
 function App() {
   const router = createBrowserRouter(
@@ -29,6 +31,8 @@ function App() {
         <Route path='aboutus' element={<AboutUs /> }/>
         <Route path='staff' element={<AboutStaff /> }/>
         <Route path='nurse' element={<NurshingService /> }/>
+        <Route path='bedside' element={<BedSideAttendant />} />
+        <Route path='medicalattendant' element={<MedicalAttendant />}/>
         <Route path='patholab' element={<PathoLabService /> }/>
         <Route path='babycare' element={<BabyCareService /> }/>
         <Route path='physiotherapy' element={<PhysiotherapyService /> }/> 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Team.css';  // Import the external CSS file for styling
-
+import importFiles from '../importFiles';
 function Team() {
   return (
     <div className="team-container mt-10 mb-20">
@@ -14,33 +14,33 @@ function Team() {
 
         <div className="team-grid grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 text-center mt-16 max-w-5xl max-lg:max-w-3xl max-md:max-w-xl mx-auto">
           <div className="team-member">
-            <img src="https://readymadeui.com/team-3.webp" className="team-img" alt="Simon Konecki" />
+            <img src={importFiles.nurseSection} className="team-img" alt="sarmishta" />
             <div className="team-details py-4">
-              <h4 className="team-name text-gray-800 text-base font-bold">Simon Konecki</h4>
+              <h4 className="team-name text-gray-800 text-base font-bold">Sarmistha Sahoo</h4>
               <p className="team-role text-gray-800 text-xs mt-1">Nurse</p>
             </div>
           </div>
 
           <div className="team-member">
-            <img src="https://readymadeui.com/team-4.webp" className="team-img" alt="Sophia" />
+            <img src={importFiles.nurseSection} className="team-img" alt="Nibedita Behara" />
             <div className="team-details py-4">
-              <h4 className="team-name text-gray-800 text-base font-bold">Sophia</h4>
+              <h4 className="team-name text-gray-800 text-base font-bold">Nibedidta Behera</h4>
               <p className="team-role text-gray-800 text-xs mt-1">Assistant Nurse</p>
             </div>
           </div>
 
           <div className="team-member">
-            <img src="https://readymadeui.com/team-1.webp" className="team-img" alt="John Doe" />
+            <img src={importFiles.nurseSection} className="team-img" alt="Prachi Mishra" />
             <div className="team-details py-4">
-              <h4 className="team-name text-gray-800 text-base font-bold">John Doe</h4>
+              <h4 className="team-name text-gray-800 text-base font-bold">Prachi Mishra</h4>
               <p className="team-role text-gray-800 text-xs mt-1">Assistant Nurse</p>
             </div>
           </div>
 
           <div className="team-member">
-            <img src="https://readymadeui.com/team-2.webp" className="team-img" alt="Mark Adair" />
+            <img src={importFiles.nurseSection} className="team-img" alt="Sasmita Samal" />
             <div className="team-details py-4">
-              <h4 className="team-name text-gray-800 text-base font-bold">Mark Adair</h4>
+              <h4 className="team-name text-gray-800 text-base font-bold">Sasmita Samal</h4>
               <p className="team-role text-gray-800 text-xs mt-1">Assistant Nurse</p>
             </div>
           </div>

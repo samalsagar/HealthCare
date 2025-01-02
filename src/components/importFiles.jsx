@@ -30,8 +30,10 @@ import criticalcareservice from '../assets/Service/critical.jpg';
 import seniorcitizenservice from '../assets/Service/citizen.jpg';
 import doctorservice from '../assets/Service/doctor.jpg';
 
+//TEAM SECTION
+import nurseSection from '../assets/team/nurse3.jpg'
 const importFiles = {
      bed, medical,aboutus,staff,nurse,patholab,baby,therapy,preg,attendant,criticalcare,seniorcitizen,doctor,bedside_attendant,
-     medical_attendant , nurseservice, patholabservice, babycareservice, therapist, pregnancyservice, attendantservice, criticalcareservice, seniorcitizenservice, doctorservice
+     medical_attendant , nurseservice, patholabservice, babycareservice, therapist, pregnancyservice, attendantservice, criticalcareservice, seniorcitizenservice, doctorservice, nurseSection
     };  
 export default importFiles;

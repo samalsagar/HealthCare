@@ -1,6 +1,7 @@
 import React from 'react'
-import logo from '../../assets/hospitalLogo.png'
-import testlogo from '../../assets/testlogo.jpeg';
+import { Link } from 'react-router-dom';
+// import logo from '../../assets/hospitalLogo.png'
+import testlogo from '../../assets/logo.jpg';
 function Footer() {
   return (
     <div>
@@ -8,9 +9,9 @@ function Footer() {
       <div className="relative max-w-screen-xl mx-auto">
         <div className="hidden lg:flex bg-blue-600 gap-3 rounded-md flex-wrap items-center justify-between sm:px-8 max-sm:px-4 py-4 absolute top-[-66px] w-full">
           <h6 className="text-white sm:text-xl max-sm:text-base font-semibold">Let Us Help You Stay Healthy</h6>
-          <button type='button'
+         <Link> <button type='button'
             className="px-4 py-2 text-sm rounded-full text-black gap-2 bg-white">Get
-            Started</button>
+            Started</button></Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pt-10">
@@ -22,14 +23,14 @@ function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-gray-200">Useful Links</h4>
             <ul className="space-y-4">
-              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Web
-                Development</a></li>
-              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Mobile App
-                Development</a></li>
-              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">UI/UX
-                Design</a></li>
-              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Digital
-                Marketing</a></li>
+              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Home
+                </a></li>
+              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Gallery
+                </a></li>
+              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Contact Us
+                </a></li>
+              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">
+                Carrer</a></li>
             </ul>
           </div>
 

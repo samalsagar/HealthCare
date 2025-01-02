@@ -3,7 +3,7 @@ import banner from '../../assets/aboutusBanner2.gif'
 import mission_vision from '../../assets/mission_vision.jpg'
 function AboutUs() {
   return (
-    <div className='mt-7'>
+    <div className='mt-11'>
       <img src={banner} alt="" className='w-full' />
       <div className="font-sans bg-gray-100 px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:max-w-6xl max-w-2xl mx-auto">

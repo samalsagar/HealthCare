@@ -5,7 +5,7 @@ import ServiceListBox from '../../ServiceListBox/ServiceListBox';
 
 function NurshingService() {
   return (
-    <div className="bg-gray-100 mt-10">
+    <div className="bg-gray-100 mt-11">
       <img src={banner} alt="Home Nursing Banner" className="" />
 
       <div className="grid lg:grid-cols-2 gap-12 lg:max-w-6xl max-w-2xl mx-auto mt-10 px-6 md:px-12">
