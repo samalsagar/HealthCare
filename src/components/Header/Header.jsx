@@ -42,12 +42,16 @@ function Header() {
         setModalOpen(false);
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0 });
+    };
+
     return (
         <div className=''>
             <header className='font-[sans-serif] min-h-[60px] tracking-wide relative z-50'>
                 <section className='flex border-b bg-white font-sans min-h-[70px] tracking-wide relative z-50 sticky-header'>
                     <div className='flex flex-wrap items-center justify-between sm:px-10 px-4 py-3 gap-4 w-full max-w-screen-xl mx-auto'>
-                        <Link href=""><img src={logo} alt="logo" className='h-20 w-24' /></Link>
+                        <Link to="/"><img src={logo} alt="logo" className='h-20 w-24' /></Link>
 
                         {/* Mobile Menu Toggle Button */}
                         <button
@@ -70,7 +74,11 @@ function Header() {
                             <ul className='lg:flex lg:gap-x-10 max-lg:space-y-3 text-left'>
                                 <li className='max-lg:border-b max-lg:py-3'>
                                     <Link to='/' 
-                                    onClick={closeMenuAndNavigate}
+                                    // onClick={closeMenuAndNavigate}
+                                    onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                     className='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</Link>
                                 </li>
 
@@ -90,14 +98,22 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.aboutus} alt="" className='h-5 me-2' />
                                             <Link to="aboutus" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Us</Link>
                                         </li>
                                         <li className='border-b py-2 flex items-center'>
                                             <i className="fas fa-vial h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.staff} alt="" className='h-5 me-2' />
                                             <Link to="staff" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>About Our Staff</Link>
                                         </li>
                                     </ul>
@@ -119,7 +135,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.nurse} alt="" className='h-5 me-2' />
                                             <Link to="nurse" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Nursing Services</Link>
                                         </li>
                                         
@@ -127,7 +147,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.attendant} alt="" className='h-5 me-2' />
                                             <Link to="homeattendant" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Home Attendant</Link>
                                         </li>
 
@@ -135,7 +159,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.bed} alt="" className='h-5 me-2' />
                                             <Link to="bedside" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Bedside Attendant</Link>
                                         </li>
 
@@ -143,7 +171,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.medical} alt="" className='h-5 me-2' />
                                             <Link to="medicalattendant" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Medical Attendant</Link>
                                         </li>
 
@@ -151,7 +183,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.seniorcitizen} alt="" className='h-5 me-2' />
                                             <Link to="siniorcare" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Senior Citizen Care</Link>
                                         </li>
 
@@ -159,7 +195,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.preg} alt="" className='h-5 me-2' />
                                             <Link to="pregnancycare" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Pregnancy Care</Link>
                                         </li>
 
@@ -169,7 +209,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.baby} alt="" className='h-5 me-2' />
                                             <Link to="babycare" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Baby Care</Link>
                                         </li>
 
@@ -177,7 +221,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.criticalcare} alt="" className='h-5 me-2' />
                                             <Link to="criticalcare" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Critical Care</Link>
                                         </li>
 
@@ -187,7 +235,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.patholab} alt="" className='h-5 me-2' />
                                             <Link to="patholab" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Patholab Test </Link>
                                         </li>
 
@@ -195,7 +247,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.therapy} alt="" className='h-5 me-2' />
                                             <Link to="physiotherapy" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Physiotherapy</Link>
                                         </li>
 
@@ -205,7 +261,11 @@ function Header() {
                                             <i className="fas fa-bed h-5 w-5 text-gray-600 mr-2"></i>
                                             <img src={importFiles.doctor} alt="" className='h-5 me-2' />
                                             <Link to="doctor" 
-                                            onClick={closeMenuAndNavigate}
+                                            // onClick={closeMenuAndNavigate}
+                                            onClick={() => {
+                                                closeMenuAndNavigate();
+                                                scrollToTop();
+                                              }} 
                                             className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Doctor Consultation </Link>
                                         </li>
                                     </ul>
@@ -214,7 +274,11 @@ function Header() {
                                 {/* Other menu items */}
                                 <li className='max-lg:border-b max-lg:py-3'>
                                     <Link to='gallery' 
-                                    onClick={closeMenuAndNavigate}
+                                    // onClick={closeMenuAndNavigate}
+                                    onClick={() => {
+                                        closeMenuAndNavigate();
+                                        scrollToTop();
+                                      }} 
                                     className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Gallery</Link>
                                 </li>
                                 {/* <li className='max-lg:border-b max-lg:py-3'>
@@ -222,12 +286,18 @@ function Header() {
                                 </li> */}
                                 <li className='max-lg:border-b max-lg:py-3'>
                                     <Link to='carrer' 
-                                    onClick={closeMenuAndNavigate}
+                                     onClick={() => {
+                                        closeMenuAndNavigate();
+                                        scrollToTop();
+                                      }} 
                                     className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Career</Link>
                                 </li>
                                 <li className='max-lg:border-b max-lg:py-3'>
                                     <Link to='enquiry' 
-                                    onClick={closeMenuAndNavigate}
+                                    onClick={() => {
+                                        closeMenuAndNavigate();
+                                        scrollToTop();
+                                      }} 
                                     className='hover:text-[#007bff] text-gray-600 text-[15px] font-bold block'>Enquiry Now</Link>
                                 </li>
                             </ul>

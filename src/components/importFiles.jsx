@@ -32,8 +32,11 @@ import doctorservice from '../assets/Service/doctor.jpg';
 
 //TEAM SECTION
 import nurseSection from '../assets/team/nurse3.jpg'
+
+// COMMING SOON SECTION
+import commingsoon from '../assets/commingsoon.gif'
 const importFiles = {
      bed, medical,aboutus,staff,nurse,patholab,baby,therapy,preg,attendant,criticalcare,seniorcitizen,doctor,bedside_attendant,
-     medical_attendant , nurseservice, patholabservice, babycareservice, therapist, pregnancyservice, attendantservice, criticalcareservice, seniorcitizenservice, doctorservice, nurseSection
+     medical_attendant , nurseservice, patholabservice, babycareservice, therapist, pregnancyservice, attendantservice, criticalcareservice, seniorcitizenservice, doctorservice, nurseSection, commingsoon
     };  
 export default importFiles;

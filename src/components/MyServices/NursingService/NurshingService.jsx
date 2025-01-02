@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../../../assets/nursingBanner.gif';
+import banner from '../../../assets/MyServicesBanner/nursingBanner.gif';
 import AppointmentForm from '../../AppointmentForm/AppointmentForm';
 import ServiceListBox from '../../ServiceListBox/ServiceListBox';
 

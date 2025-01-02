@@ -1,9 +1,79 @@
 import React from 'react'
-import banner from '../../assets/enquiryBanner.gif'
+import banner from '../../assets/MyServicesBanner/enquiryBanner.gif'
+
 function Enquiry() {
   return (
-    <div className='mt-10'>
+    <div className='mt-11'>
       <img src={banner} alt="" />
+      <div className="text-center pt-10 mb-20">
+                <h2 className="text-3xl font-extrabold text-gray-800 inline-block relative after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0 after:-bottom-4 after:mx-auto after:bg-yellow-400 after:rounded-full">
+                    Contact Us
+                </h2>
+                <p className="text-md text-gray-800 mt-6 leading-relaxed ps-20 pe-20">
+                    "We'd love to hear from you! Whether you have a question, feedback, or need assistance, our team is here to help. Feel free to reach out through
+                    any of the following methods, and we'll get back to you as soon as possible."
+                </p>
+            </div>
+            <div className="grid lg:grid-cols-3 gap-12 px-8 sm:px-16 z-10 relative">
+                {/* Left Side: Contact Form */}
+                
+
+                {/* Right Side: Image */}
+                <div
+                    
+                    className="relative lg:col-span-2 flex justify-center items-center"
+                   
+                >
+                    <img
+                        src="https://readymadeui.com/images/analtsis.webp"
+                        alt="Contact"
+                        className="w-3/4 mx-auto rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300"
+                    />
+                </div>
+
+                <div
+                   
+                    className="max-w-lg mx-auto text-center"
+                   
+                >
+                    <h3 className="text-4xl font-semibold text-gray-800 mb-6">Let’s Get In Touch!</h3>
+                    <p className="text-gray-600 mb-6">We’re excited to hear from you. Please fill out the form below, and we’ll get back to you shortly.</p>
+
+                    <form className="space-y-6">
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            className="w-full h-14 px-6 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition-all duration-300 shadow-sm hover:shadow-lg"
+                           
+                        />
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            className="w-full h-14 px-6 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition-all duration-300 shadow-sm hover:shadow-lg"
+                           
+                        />
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                            className="w-full h-14 px-6 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition-all duration-300 shadow-sm hover:shadow-lg"
+                           
+                        />
+                        <textarea
+                            placeholder="Your Message"
+                            rows="4"
+                            className="w-full px-6 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition-all duration-300 shadow-sm hover:shadow-lg"
+                           
+                        ></textarea>
+                        <button
+                            type="button"
+                            className="w-full py-3 text-white bg-gradient-to-r from-blue-400 to-yellow-500 rounded-lg text-lg font-semibold transform hover:scale-105 transition-all duration-300"
+                           
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
     </div>
   )
 }
