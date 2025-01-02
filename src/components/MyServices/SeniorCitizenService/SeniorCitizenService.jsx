@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../../../assets/MyServicesBanner/seniorcitizenBanner.gif';
+import banner from '../../../assets/MyServicesBanner/seniorCitizenBanner.gif';
 import AppointmentForm from '../../AppointmentForm/AppointmentForm';
 import ServiceListBox from '../../ServiceListBox/ServiceListBox';
 function SeniorCitizenService() {
