@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 // import logo from '../../assets/hospitalLogo.png'
 import testlogo from '../../assets/logo.jpg';
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0 });
+};
   return (
     <div>
     <footer className="bg-gray-800 py-8 px-8 font-[sans-serif] tracking-wide mt-16">
       <div className="relative max-w-screen-xl mx-auto">
         <div className="hidden lg:flex bg-blue-600 gap-3 rounded-md flex-wrap items-center justify-between sm:px-8 max-sm:px-4 py-4 absolute top-[-66px] w-full">
           <h6 className="text-white sm:text-xl max-sm:text-base font-semibold">Let Us Help You Stay Healthy</h6>
-         <Link> <button type='button'
+         <Link to="/" onClick={()=> scrollToTop()}> <button type='button'
             className="px-4 py-2 text-sm rounded-full text-black gap-2 bg-white">Get
             Started</button></Link>
         </div>
@@ -23,14 +26,14 @@ function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-gray-200">Useful Links</h4>
             <ul className="space-y-4">
-              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Home
-                </a></li>
-              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Gallery
-                </a></li>
-              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">Contact Us
-                </a></li>
-              <li><a href="" className="text-gray-400 hover:text-gray-300 text-base">
-                Carrer</a></li>
+              <li><Link to="/" onClick={()=> scrollToTop()} className="text-gray-400 hover:text-gray-300 text-base">Home
+                </Link></li>
+              <li><Link to="gallery" onClick={()=> scrollToTop()} className="text-gray-400 hover:text-gray-300 text-base">Gallery
+                </Link></li>
+              <li><Link to="enquiry" onClick={()=> scrollToTop()} className="text-gray-400 hover:text-gray-300 text-base">Contact Us
+                </Link></li>
+              <li><Link to="carrer" onClick={()=> scrollToTop()} className="text-gray-400 hover:text-gray-300 text-base">
+                Carrer</Link></li>
             </ul>
           </div>
 

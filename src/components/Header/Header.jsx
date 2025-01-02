@@ -79,7 +79,7 @@ function Header() {
                                                 closeMenuAndNavigate();
                                                 scrollToTop();
                                               }} 
-                                    className='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</Link>
+                                    className='hover:text-blue-600 text-[15px] font-bold block text-gray-600'>Home</Link>
                                 </li>
 
                                 {/* About Menu item */}
