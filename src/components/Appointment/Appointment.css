@@ -1,8 +1,8 @@
 /* Container for Human Icon and Appointment Text */
 .human-icon-container {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 12px;
+  right: 74px;
   display: flex;
   align-items: center;
   cursor: pointer;
