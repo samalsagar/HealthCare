@@ -17,8 +17,7 @@ function Review() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-title">What Our Happy Clients Say</h2>
           <p className="section-description">
-            Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit.
-            Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in
+          Our clients frequently share their appreciation for the outstanding service we provide, highlighting how our team goes above and beyond to ensure their needs are met with professionalism, efficiency, and a personal touch that truly makes a difference in their experience.
           </p>
         </div>
 
@@ -55,7 +54,7 @@ function Review() {
             </div>
             <div className="review-body">
               <p className="review-text">
-                The service was amazing. I never had to wait that long for my service. The staff was friendly and attentive.
+              The service exceeded my expectations. I was impressed by how quickly I was attended to, with no long wait times. The staff were incredibly friendly and attentive throughout the entire process.
               </p>
             </div>
           </div>
@@ -73,7 +72,7 @@ function Review() {
             </div>
             <div className="review-body">
               <p className="review-text">
-                The service was amazing. I never had to wait that long for my service. The staff was friendly and attentive.
+              I was highly impressed with the service. There was no wait time, and everything was handled promptly. The staff were warm, welcoming, and always attentive to my needs.
               </p>
             </div>
           </div>
