@@ -102,7 +102,7 @@ function Footer() {
       </div>
 
       <div className="bg-gray-900 py-4 px-4 -mx-8 text-center mt-10">
-        <p className='text-gray-400 text-base'>©homenursingseva. All rights reserved.</p>
+        <p className='text-gray-400 text-base'>©EFIC E - SOLUTION PVT. LTD. (OPC). All rights reserved.</p>
       </div>
     </footer>
     </div>
