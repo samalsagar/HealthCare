@@ -22,23 +22,23 @@ function Carrer() {
   // Job data to pass to modal
   const jobData = [
     {
-      title: 'Job Name',
+      title: 'Nurse',
       type: 'Full-Time',
-      location: 'Remote',
-      // description: 'Build amazing user interfaces with React and other modern technologies.',
+      location: 'Bhubaneswar',
+      description: 'Providing compassionate healthcare for Patients / Babies individuals in a clients/patients home or at Medical as per client request.',
     },
-    {
-      title: 'job Name',
-      type: 'Part-Time',
-      location: 'India',
-      description: 'Develop scalable server-side applications using Node.js and databases.',
-    },
-    {
-      title: 'Job Name',
-      type: 'Freelance',
-      location: 'India',
-      description: 'Lead the development of new product features and user experiences.',
-    },
+    // {
+    //   title: 'job Name',
+    //   type: 'Part-Time',
+    //   location: 'India',
+    //   description: 'Develop scalable server-side applications using Node.js and databases.',
+    // },
+    // {
+    //   title: 'Job Name',
+    //   type: 'Freelance',
+    //   location: 'India',
+    //   description: 'Lead the development of new product features and user experiences.',
+    // },
   ];
 
   return (

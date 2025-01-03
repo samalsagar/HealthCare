@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Appointment.css'; // Import your CSS file for the styling
+import axios from 'axios'; 
 
 function Appointment() {
   let [isChatbotVisible, setIsChatbotVisible] = useState(false);
@@ -38,9 +39,35 @@ function Appointment() {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    console.log('submitted');
-    setIsChatbotVisible(false);
+    console.log(name, patientName, patientage, mobileNumber, area, service);
+    const data = {
+      Name: name,
+      PatientName: patientName,
+      Patientage: patientage,
+      MobileNumber:mobileNumber,
+      Area:area,
+      Service: service
   };
+
+  axios.post('https://api.sheetbest.com/sheets/cf76c313-cb91-4180-b509-c3d0aaf743fb', data).then((response) => {
+      // console.log(response);
+      // Swal.fire('We Appreciate Your Inquiry', "Will get back to you soon", 'success');
+      setIsChatbotVisible(false);
+      setName('');
+      setpatientName('');
+      setpatientage('');
+      setmobileNumber('');
+      setarea('');
+      setservice('');
+  }); 
+  };
+
+  const [name, setName] = useState('')
+  const [patientName, setpatientName] = useState('')
+  const [patientage, setpatientage] = useState('')
+  const [mobileNumber, setmobileNumber] = useState('')
+  const [area, setarea] = useState('')
+  const [service, setservice] = useState('')
 
   return (
     <div className=''>
@@ -63,12 +90,35 @@ function Appointment() {
           <div className="chatbot-header">Book Appointment</div>
 
           <div className="chatbot-form">
-            <input type="text" placeholder="Your Name" />
-            <input type="text" placeholder="Patient Name" />
-            <input type="text" placeholder="Patient Age" />
-            <input type="text" placeholder="Mobile Number" />
-            <input type="text" placeholder="Area" />
-            <select>
+            <input 
+            value={name}
+            onChange={(e)=> setName(e.target.value)}
+            required
+            type="text" placeholder="Your Name" />
+            <input
+            value={patientName}
+            onChange={(e)=>setpatientName(e.target.value)}
+            required
+            type="text" placeholder="Patient Name" />
+
+            <input 
+            value={patientage}
+            onChange={(e)=> setpatientage(e.target.value)}
+            required
+            type="text" placeholder="Patient Age" />
+
+
+            <input 
+            value={mobileNumber}
+            onChange={(e)=> setmobileNumber(e.target.value)}
+            required
+            type="text" placeholder="Mobile Number" />
+
+            <input 
+            value={area}
+            onChange={(e)=> setarea(e.target.value)}
+            type="text" placeholder="Area" />
+            <select onChange={(e)=> setservice(e.target.value)} value={service}>
               <option value="#">Choose a Service</option>
               <option value="Nursing Service">Nursing Service</option>
               <option value="Patho Lab Test">Patho Lab Test</option>

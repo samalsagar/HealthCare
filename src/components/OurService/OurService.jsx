@@ -14,7 +14,7 @@ function OurService() {
     {
       title: "Nursing Service",
       description: "Our Nursing Service is dedicated to providing personalized, professional, and compassionate care to individuals in the comfort of their homes or in medical facilities. Whether you're recovering from surgery, managing a chronic illness, or need support with daily living activities, our team of experienced nurses offers a wide range of services tailored to meet the unique needs of each patient.",
-      image: importFiles.nurseservice,
+      image: importFiles.nursingImage,
       myUrl : "nurse"
     },
     {
@@ -36,7 +36,7 @@ function OurService() {
       myUrl : "medicalattendant"
     },
     {
-      title: "Senior Citizen",
+      title: "Senior Citizen care",
       description: "As our loved ones age, their needs change, and providing them with the right care and support is essential. Our Senior Citizen Care service is designed to offer compassionate, professional, and personalized assistance to seniors who need help with daily activities, medical care, and emotional support.",
       image: importFiles.seniorcitizenservice,
        myUrl : "siniorcare"

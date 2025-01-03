@@ -59,7 +59,7 @@ function ServiceListBox() {
         </Link>
 
 
-        <Link to="/" onClick={() => {scrollToTop()}} >
+        <Link to="/bedside" onClick={() => {scrollToTop()}} >
           <div className="bg-white p-6 rounded-lg shadow-md transition-all transform hover:scale-105 hover:shadow-2xl cursor-pointer hover:bg-blue-50 hover:translate-y-2">
             <div className="flex items-center space-x-4">
               <div className="text-blue-500 text-4xl transition-all transform hover:scale-110">
@@ -74,7 +74,7 @@ function ServiceListBox() {
           </div>
         </Link>
 
-        <Link to="/" onClick={() => {scrollToTop()}} >
+        <Link to="/medicalattendant" onClick={() => {scrollToTop()}} >
           <div className="bg-white p-6 rounded-lg shadow-md transition-all transform hover:scale-105 hover:shadow-2xl cursor-pointer hover:bg-blue-50 hover:translate-y-2">
             <div className="flex items-center space-x-4">
               <div className="text-blue-500 text-4xl transition-all transform hover:scale-110">
