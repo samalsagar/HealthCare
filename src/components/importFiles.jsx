@@ -26,7 +26,7 @@ import nursingImage from '../assets/MyServicesImage/nurse.jpg';
 import attendantservice from '../assets/MyServicesImage/homeAttendant.jpg'; 
 import bedside_attendant from '../assets/MyServicesImage/bedsideAttendant.jpg'
 import medical_attendant from '../assets/MyServicesImage/medicalAttendant.jpg'
-import seniorcitizenservice from '../assets/MyServicesImage/seniorCitizen.JPG';
+import seniorcitizenservice from '../assets/MyServicesImage/seniorCitizen.jpg';
 import pregnancyservice from '../assets/MyServicesImage/pregnancyCare.jpg'; 
 import babycareservice from '../assets/MyServicesImage/babyCare.jpg';
 import patholabservice from '../assets/MyServicesImage/pathoLab.jpg';
