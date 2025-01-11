@@ -26,7 +26,7 @@ import MedicalAttendant from './components/MyServices/MedicalAttendant/MedicalAt
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<LayoutRoot />}>
+      <Route path='/' element={<LayoutRoot />} basename='/'>
         <Route path='' element={<Home /> }/>
         <Route path='aboutus' element={<AboutUs /> }/>
         <Route path='staff' element={<AboutStaff /> }/>
