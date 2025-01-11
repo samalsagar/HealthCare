@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios'; 
+import axios from 'axios';
 import Swal from 'sweetalert2';
 
 function AppointmentForm() {
@@ -13,7 +13,7 @@ function AppointmentForm() {
   const handlesubmit = (e) => {
     e.preventDefault();
     console.log(name, patientName, patientage, mobileNumber, area, service);
-    
+
     const data = {
       Name: name,
       PatientName: patientName,
@@ -23,13 +23,13 @@ function AppointmentForm() {
       Service: service
     };
     axios.post('https://api.sheetbest.com/sheets/cf76c313-cb91-4180-b509-c3d0aaf743fb', data).then((response) => {
-        Swal.fire('We Appreciate You For An Appointment', "Will get back to you soon", 'success');
-        setName('');
-        setpatientName('');
-        setpatientage('');
-        setmobileNumber('');
-        setarea('');
-        setservice('');
+      Swal.fire('We Appreciate You For An Appointment', "Will get back to you soon", 'success');
+      setName('');
+      setpatientName('');
+      setpatientage('');
+      setmobileNumber('');
+      setarea('');
+      setservice('');
     });
   };
 
@@ -112,16 +112,18 @@ function AppointmentForm() {
                   required
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  <option value="">Choose Service</option>
-                  <option value="nursing">Nursing Service</option>
-                  <option value="patho_lab_test">Patho Lab Test</option>
-                  <option value="baby_care">Baby Care</option>
-                  <option value="physiotherapy">Physiotherapy</option>
-                  <option value="pregnancy_care">Pregnancy Care</option>
-                  <option value="home_attendant">Home Attendant</option>
-                  <option value="critical_care">Critical Care</option>
-                  <option value="senior_citizen">Senior Citizen</option>
-                  <option value="doctor_consultation">Doctor Consultation</option>
+                  <option value="#">Choose a Service</option>
+                  <option value="Nursing Service">Nursing Service</option>
+                  <option value="Home Attendant">Home Attendant</option>
+                  <option value="Bedside Attendant">Bedside Attendant</option>
+                  <option value="Medical Attendant">Medical Attendant</option>
+                  <option value="Senior Citizen">Senior Citizen Care</option>
+                  <option value="Pregnancy Care">Pregnancy Care</option>
+                  <option value="Baby Care">Baby Care</option>
+                  <option value="Critical Care">Critical Care</option>
+                  <option value="Patho Lab Test">Patho Lab Test</option>
+                  <option value="Physiotherapy Service">Physiotherapy</option>
+                  <option value="Doctor Consultation">Doctor Consultation</option>
                 </select>
               </div>
 
