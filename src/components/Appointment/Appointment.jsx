@@ -121,13 +121,15 @@ function Appointment() {
             <select onChange={(e)=> setservice(e.target.value)} value={service}>
               <option value="#">Choose a Service</option>
               <option value="Nursing Service">Nursing Service</option>
-              <option value="Patho Lab Test">Patho Lab Test</option>
-              <option value="Baby Care">Baby Care</option>
-              <option value="Physiotherapy Service">Physiotherapy Service</option>
-              <option value="Pregnancy Care">Pregnancy Care</option>
               <option value="Home Attendant">Home Attendant</option>
+              <option value="Bedside Attendant">Bedside Attendant</option>
+              <option value="Medical Attendant">Medical Attendant</option>
+              <option value="Senior Citizen">Senior Citizen Care</option>
+              <option value="Pregnancy Care">Pregnancy Care</option>
+              <option value="Baby Care">Baby Care</option>
               <option value="Critical Care">Critical Care</option>
-              <option value="Senior Citizen">Senior Citizen</option>
+              <option value="Patho Lab Test">Patho Lab Test</option>
+              <option value="Physiotherapy Service">Physiotherapy</option>
               <option value="Doctor Consultation">Doctor Consultation</option>
             </select>
 

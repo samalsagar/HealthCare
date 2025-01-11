@@ -2,13 +2,13 @@ import React, { useState,useEffect } from 'react';
 import './Header.css';
 
 import logo from '../../assets/logo.jpg';
-import Modal from '../Modal/Modal'; 
+// import Modal from '../Modal/Modal'; 
 import { Link } from 'react-router-dom';
 import importFiles from '../importFiles';
 function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);  // State to track menu visibility
-    const [aboutOpen, setAboutOpen] = useState(false); // State to track About submenu visibility
-    const [servicesOpen, setServicesOpen] = useState(false); // State to track Services submenu visibility
+    const [menuOpen, setMenuOpen] = useState(false);  
+    const [aboutOpen, setAboutOpen] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false); 
     const [modalOpen, setModalOpen] = useState(false); 
 
     // Toggle the menu visibility
@@ -304,7 +304,7 @@ function Header() {
                         </div>
                     </div>
                 </section>
-                <Modal isOpen={modalOpen} onClose={closeModal} />
+                {/* <Modal isOpen={modalOpen} onClose={closeModal} /> */}
             </header>
         </div>
     );

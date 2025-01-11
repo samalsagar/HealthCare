@@ -1,5 +1,5 @@
 import React from 'react';
-import hero from '../../assets/mainHero.mp4';
+import hero from '../../assets/mainHero2.mp4';
 import OurService from '../OurService/OurService';
 import Welcome from '../Welcome/Welcome';
 import Review from '../Review/Review';

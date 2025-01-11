@@ -54,7 +54,7 @@ function Review() {
             </div>
             <div className="review-body">
               <p className="review-text">
-              The service exceeded my expectations. I was impressed by how quickly I was attended to, with no long wait times. The staff were incredibly friendly and attentive throughout the entire process.
+              Excellent service! I didn't have to wait, and the staff were friendly with my mother and my mother was very comfortable with staffs and happy with their service.
               </p>
             </div>
           </div>
@@ -63,16 +63,16 @@ function Review() {
             <div className="review-header">
               <img src={female} className="avatar" alt="client" />
               <h4 className="client-name">
-                Ms. Swati Behera
+                Ms. Padmini Behera
                 <div className="location">
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  <span>Rourkela</span>
+                  <span>Puri</span>
                 </div>
               </h4>
             </div>
             <div className="review-body">
               <p className="review-text">
-              I was highly impressed with the service. There was no wait time, and everything was handled promptly. The staff were warm, welcoming, and always attentive to my needs.
+              I was highly impressed with the service. There was no wait time, and everything was handled properly. The staff were warm, welcoming, and always attentive to my needs.
               </p>
             </div>
           </div>
