@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import banner from '../../assets/MyServicesBanner/carrerBanner.gif';
-import logo from '../../assets/logo.jpg';
+// import logo from '../../assets/logo.jpg';
 
 function Carrer() {
   // Job data to display
@@ -13,7 +13,7 @@ function Carrer() {
       openings: 'Multiple',
       languages: 'Odia, English, Hindi',
       experience: 'Freshers / Experience holders',
-      salary: 'Rs. 7,000.00 (Seven Thousand) for Freshers. For experienced holders, salary to be confirmed after discussion.',
+      // salary: 'Rs. 7,000.00 (Seven Thousand) for Freshers. For experienced holders, salary to be confirmed after discussion.',
       education: '10th pass/+2 or More or A.N.M/G.N.M',
     },
   ];
@@ -58,7 +58,7 @@ function Carrer() {
               <li className="text-left"><strong>Openings:</strong> {jobData[0].openings}</li>
               <li className="text-left"><strong>Languages:</strong> {jobData[0].languages}</li>
               <li className="text-left"><strong>Experience:</strong> {jobData[0].experience}</li>
-              <li className="text-left"><strong>Salary:</strong> {jobData[0].salary}</li>
+              {/* <li className="text-left"><strong>Salary:</strong> {jobData[0].salary}</li> */}
               <li className="text-left"><strong>Education:</strong> {jobData[0].education}</li>
             </ul>
           </div>
