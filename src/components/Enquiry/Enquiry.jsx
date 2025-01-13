@@ -34,7 +34,7 @@ function Enquiry() {
     }
 
     return (
-        <div className=''>
+        <div className='mt-11'>
             <img src={banner} alt=""  className=''/>
             <div className="text-center pt-10 mb-20">
                 <h2 className="text-3xl font-extrabold text-gray-800 inline-block relative after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0 after:-bottom-4 after:mx-auto after:bg-yellow-400 after:rounded-full">
