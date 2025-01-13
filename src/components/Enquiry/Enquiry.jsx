@@ -34,14 +34,14 @@ function Enquiry() {
     }
 
     return (
-        <div className='mt-11'>
-            <img src={banner} alt="" />
+        <div className=''>
+            <img src={banner} alt=""  className=''/>
             <div className="text-center pt-10 mb-20">
                 <h2 className="text-3xl font-extrabold text-gray-800 inline-block relative after:absolute after:w-4/6 after:h-1 after:left-0 after:right-0 after:-bottom-4 after:mx-auto after:bg-yellow-400 after:rounded-full">
                     Contact Us
                 </h2>
                 <p className="text-md text-gray-800 mt-6 leading-relaxed ps-20 pe-20">
-                    "We'd love to hear from you! Whether you have a question, feedback, or need assistance, our team is here to help. Feel free to reach out through
+                    "We'd love to hear from you! Feel free to reach out through
                     any of the following methods, and we'll get back to you as soon as possible."
                 </p>
             </div>
