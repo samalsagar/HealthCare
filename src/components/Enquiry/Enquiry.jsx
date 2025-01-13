@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from '../../assets/MyServicesBanner/enquiryBanner.gif'
+import image from '../../assets/contactUs.png'
 import { useState } from 'react'
 import axios from 'axios'; 
 import Swal from 'sweetalert2';
@@ -55,7 +56,8 @@ function Enquiry() {
 
                 >
                     <img
-                        src="https://readymadeui.com/images/analtsis.webp"
+                        // src="https://readymadeui.com/images/analtsis.webp"
+                        src={image}
                         alt="Contact"
                         className="w-3/4 mx-auto rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300"
                     />
