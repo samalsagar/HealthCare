@@ -7,8 +7,8 @@ function Footer() {
     window.scrollTo({ top: 0 });
 };
   return (
-    <div>
-    <footer className="bg-gray-800 py-8 px-8 font-[sans-serif] tracking-wide mt-16">
+    <div className=''>
+    <footer className="bg-gray-800 py-28 px-8 font-[sans-serif] tracking-wide mt-16">
       <div className="relative max-w-screen-xl mx-auto">
         <div className="hidden lg:flex bg-blue-600 gap-3 rounded-md flex-wrap items-center justify-between sm:px-8 max-sm:px-4 py-4 absolute top-[-66px] w-full">
           <h6 className="text-white sm:text-xl max-sm:text-base font-semibold">Let Us Help You Stay Healthy</h6>

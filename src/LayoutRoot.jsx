@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom'
 import Appointment from './components/Appointment/Appointment'
 import WhatsApp from './components/Whatsapp/Whatsapp'
 import CallIcon from './components/Call_Icon/CallIcon'
+import Box from './components/Box/Box'
 function LayoutRoot() {
   return (
     <div>
@@ -12,9 +13,11 @@ function LayoutRoot() {
         <Header />
         <Outlet />
         <Footer />
-        <Appointment />
-        <CallIcon />
+        <Box />
+        {/* <Appointment /> */}
+        {/* <CallIcon /> */}
         <WhatsApp />
+        {/* <Box /> */}
       </div>
     </div>
   )

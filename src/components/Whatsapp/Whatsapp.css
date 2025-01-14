@@ -1,6 +1,6 @@
 #whatsapp-button {
     position: fixed;
-    bottom: 20px; /* Distance from bottom */
+    bottom: 11%; /* Distance from bottom */
     left: 20px;  /* Distance from right */
     z-index: 9999; /* Make sure it stays on top */
   }
