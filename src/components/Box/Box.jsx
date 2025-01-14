@@ -73,21 +73,22 @@ function Box() {
 
     return (
         <div className="fixed bottom-0 left-0 w-full shadow-md z-50 border-t-4 border-blue-500">
-            <div className="h-20 w-full bg-gray-300 flex justify-center items-center">
+            <div className="h-20 w-full bg-blue-950 flex justify-center items-center">
                 {/* "Book Now" Box */}
-                <div className="bg-blue-500 text-white p-4 rounded-md shadow-md cursor-pointer" onClick={toggleChatbot}>
-                    <span className="font-semibold">Book Now</span>
-                </div>
-
+               
                 {/* "24x7 Customer Service" Box */}
                 <Link to="tel:+917735123124">
-                    <div className="bg-green-500 text-white p-4 rounded-md shadow-md cursor-pointer ms-10">
+                    <div className="bg-green-500 text-white p-4 rounded-md shadow-md cursor-pointer me-10">
                         <span className="rounded-full shadow-lg transition-colors duration-300">
                             <span className="text-xl">📞</span>
                         </span>
                         <span className="ms-4 font-semibold">24 / 7 Customer Service</span>
                     </div>
                 </Link>
+
+                <div className="bg-blue-500 text-white p-4 rounded-md shadow-md cursor-pointer" onClick={toggleChatbot}>
+                    <span className="font-semibold">Book Now</span>
+                </div>
             </div>
 
             {/* Modal (Appointment Booking Form) */}
