@@ -73,7 +73,7 @@ function Box() {
 
     return (
         <div className="fixed bottom-0 left-0 w-full shadow-md z-50 border-t-4 border-blue-500">
-            <div className="h-20 w-full bg-blue-950 flex justify-center items-center">
+            <div className="h-20 w-full bg-gray-300 flex justify-center items-center">
                 {/* "Book Now" Box */}
                
                 {/* "24x7 Customer Service" Box */}
