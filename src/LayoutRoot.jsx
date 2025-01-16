@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer'
 import { Outlet } from 'react-router-dom'
 import Appointment from './components/Appointment/Appointment'
 import WhatsApp from './components/Whatsapp/Whatsapp'
-import CallIcon from './components/Call_Icon/CallIcon'
+// import CallIcon from './components/Call_Icon/CallIcon'
 import Box from './components/Box/Box'
 function LayoutRoot() {
   return (

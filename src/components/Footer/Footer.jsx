@@ -42,8 +42,10 @@ function Footer() {
             <ul className="space-y-4">
               <li className="text-gray-400 text-base">Near Kalinga Studio,Bharatpur</li>
               <li className="text-gray-400 text-base">Khandagiri, Bhubaneswar- 03</li>
-              <li className="text-gray-400 text-base">support@homenursingseva.com</li>
-              <li className="text-gray-400 text-base">+91 7735123124</li>
+              <li className="text-gray-400 text-base"><Link to="mailto:support@homenursingseva.com">support@homenursingseva.com</Link></li>
+              
+              <li className="text-gray-400 text-base"><Link to="tel:+917735123124">+91 7735123124  </Link></li>
+            
             </ul>
           </div>
 

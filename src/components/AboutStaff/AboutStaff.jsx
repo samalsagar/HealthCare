@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../../assets/MyServicesBanner/staffBanner.gif'
+import banner from '../../assets/MyServicesBanner/Banner3.gif'
 import Team from '../Team/Team'
 function AboutStaff() {
   return (

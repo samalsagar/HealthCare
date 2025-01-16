@@ -87,7 +87,7 @@ function Box() {
                 </Link>
 
                 <div className="bg-blue-500 text-white p-4 rounded-md shadow-md cursor-pointer" onClick={toggleChatbot}>
-                    <span className="font-semibold">Book Now</span>
+                    <span className="font-semibold">👨‍⚕️ Book Now</span>
                 </div>
             </div>
 

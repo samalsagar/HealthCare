@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './Appointment.css'; // Import your CSS file for the styling
-import axios from 'axios'; 
+import './Appointment.css'; 
+import axios from 'axios';
+import WhatsApp from '../Whatsapp/Whatsapp';
 
 function Appointment() {
   let [isChatbotVisible, setIsChatbotVisible] = useState(false);
@@ -18,7 +19,6 @@ function Appointment() {
     }
   };
 
-  // Adding event listener on mount and cleaning up on unmount
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
 
@@ -47,11 +47,9 @@ function Appointment() {
       MobileNumber:mobileNumber,
       Area:area,
       Service: service
-  };
+    };
 
-  axios.post('https://api.sheetbest.com/sheets/cf76c313-cb91-4180-b509-c3d0aaf743fb', data).then((response) => {
-      // console.log(response);
-      // Swal.fire('We Appreciate Your Inquiry', "Will get back to you soon", 'success');
+    axios.post('https://api.sheetbest.com/sheets/cf76c313-cb91-4180-b509-c3d0aaf743fb', data).then((response) => {
       setIsChatbotVisible(false);
       setName('');
       setpatientName('');
@@ -59,26 +57,18 @@ function Appointment() {
       setmobileNumber('');
       setarea('');
       setservice('');
-  }); 
+    });
   };
 
-  const [name, setName] = useState('')
-  const [patientName, setpatientName] = useState('')
-  const [patientage, setpatientage] = useState('')
-  const [mobileNumber, setmobileNumber] = useState('')
-  const [area, setarea] = useState('')
-  const [service, setservice] = useState('')
+  const [name, setName] = useState('');
+  const [patientName, setpatientName] = useState('');
+  const [patientage, setpatientage] = useState('');
+  const [mobileNumber, setmobileNumber] = useState('');
+  const [area, setarea] = useState('');
+  const [service, setservice] = useState('');
 
   return (
     <div className=''>
-      {/* Human Icon and Appointment Text */}
-      <div className="human-icon-container" onClick={toggleChatbot}>
-        <div className="human-icon">
-          <span role="img" aria-label="human">👨‍⚕️</span> {/* Simple human emoji */}
-        </div>
-        <span className="appointment-text">Appointment</span>
-      </div>
-
       {/* Appointment Box */}
       <div className={`chatbot-box ${isChatbotVisible ? 'active' : ''}`} ref={chatbotRef}>
         {/* Close Button */}
@@ -91,34 +81,43 @@ function Appointment() {
 
           <div className="chatbot-form">
             <input 
-            value={name}
-            onChange={(e)=> setName(e.target.value)}
-            required
-            type="text" placeholder="Your Name" />
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              type="text" 
+              placeholder="Your Name" 
+            />
             <input
-            value={patientName}
-            onChange={(e)=>setpatientName(e.target.value)}
-            required
-            type="text" placeholder="Patient Name" />
+              value={patientName}
+              onChange={(e) => setpatientName(e.target.value)}
+              required
+              type="text" 
+              placeholder="Patient Name" 
+            />
 
             <input 
-            value={patientage}
-            onChange={(e)=> setpatientage(e.target.value)}
-            required
-            type="text" placeholder="Patient Age" />
-
-
-            <input 
-            value={mobileNumber}
-            onChange={(e)=> setmobileNumber(e.target.value)}
-            required
-            type="text" placeholder="Mobile Number" />
+              value={patientage}
+              onChange={(e) => setpatientage(e.target.value)}
+              required
+              type="text" 
+              placeholder="Patient Age" 
+            />
 
             <input 
-            value={area}
-            onChange={(e)=> setarea(e.target.value)}
-            type="text" placeholder="Area" />
-            <select onChange={(e)=> setservice(e.target.value)} value={service}>
+              value={mobileNumber}
+              onChange={(e) => setmobileNumber(e.target.value)}
+              required
+              type="text" 
+              placeholder="Mobile Number" 
+            />
+
+            <input 
+              value={area}
+              onChange={(e) => setarea(e.target.value)}
+              type="text" 
+              placeholder="Area" 
+            />
+            <select onChange={(e) => setservice(e.target.value)} value={service}>
               <option value="#">Choose a Service</option>
               <option value="Nursing Service">Nursing Service</option>
               <option value="Home Attendant">Home Attendant</option>
@@ -137,6 +136,9 @@ function Appointment() {
           </div>
         </div>
       </div>
+
+      {/* WhatsApp Component */}
+      <WhatsApp isChatbotVisible={isChatbotVisible} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../../assets/MyServicesBanner/aboutusBanner2.gif'
+import banner from '../../assets/MyServicesBanner/Banner2.gif'
 import mission_vision from '../../assets/mission_vision.jpg'
 function AboutUs() {
   return (
