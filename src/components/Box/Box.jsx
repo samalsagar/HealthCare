@@ -1,6 +1,6 @@
+import axios from 'axios';
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-
 function Box() {
     // State to manage the modal visibility
     const [isChatbotVisible, setIsChatbotVisible] = useState(false);
