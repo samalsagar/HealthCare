@@ -1,0 +1,43 @@
+User-agent: *
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.gitignore
+Disallow: /vite.config.js
+Disallow: /tailwind.config.js
+Disallow: /postcss.config.js
+Disallow: /eslint.config.js
+
+# Allow major search engine bots
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-News
+User-agent: Googlebot-Video
+User-agent: AdsBot-Google
+User-agent: Mediapartners-Google
+User-agent: AdsBot-Google-Mobile-Apps
+User-agent: Bingbot
+User-agent: MSNBot
+User-agent: Slurp
+User-agent: Yandex
+User-agent: DuckDuckBot
+Allow: /
+
+# Allow specific tools
+User-agent: Screaming Frog SEO Spider
+Allow: /
+ 
+# Allow AhrefsBot
+User-agent: AhrefsBot
+Allow: /
+# Allow AhrefsSiteAudit
+User-agent: AhrefsSiteAudit
+Allow: /
+User-agent: YandexBot
+
+# Block all other bots
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.homenursingseva.com/sitemap.xml
