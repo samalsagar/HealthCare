@@ -12,32 +12,32 @@ Disallow: /eslint.config.js
 # Allow major search engine bots
 User-agent: Googlebot
 User-agent: Googlebot-Image
-User-agent: Googlebot-News
-User-agent: Googlebot-Video
-User-agent: AdsBot-Google
 User-agent: Mediapartners-Google
-User-agent: AdsBot-Google-Mobile-Apps
-User-agent: Bingbot
-User-agent: MSNBot
+User-agent: AdsBot-Google
+User-agent: Googlebot-Mobile
+User-agent: msnbot
 User-agent: Slurp
-User-agent: Yandex
-User-agent: DuckDuckBot
+User-agent: MSICrawler
+User-agent: Baiduspider
+User-agent: Bingbot
+User-agent: seositecheckupbot
 Allow: /
 
 # Allow specific tools
 User-agent: Screaming Frog SEO Spider
+User-agent: YandexBot
+User-agent: LinkedInBot
+User-agent: Twitterbot
+User-agent: facebookexternalhit
+User-agent: Instagram
 Allow: /
  
 # Allow AhrefsBot
 User-agent: AhrefsBot
 Allow: /
+
 # Allow AhrefsSiteAudit
 User-agent: AhrefsSiteAudit
 Allow: /
-User-agent: YandexBot
-
-# Block all other bots
-User-agent: *
-Disallow: /
 
 Sitemap: https://www.homenursingseva.com/sitemap.xml
