@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /
 Disallow: /src/
 Disallow: /node_modules/
 Disallow: /package.json
