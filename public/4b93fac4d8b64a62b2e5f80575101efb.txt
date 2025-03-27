@@ -1,0 +1,26 @@
+POST /indexnow HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: api.indexnow.org
+{
+  "host": "https://www.homenursingseva.com/",
+  "key": "4b93fac4d8b64a62b2e5f80575101efb",
+  "keyLocation": "https://www.homenursingseva.com/4b93fac4d8b64a62b2e5f80575101efb.txt",
+  "urlList": [
+      "https://www.homenursingseva.com/aboutus",
+      "https://www.homenursingseva.com/staff",
+      "https://www.homenursingseva.com/nurse",
+      "https://www.homenursingseva.com/homeattendant",
+      "https://www.homenursingseva.com/bedside",
+      "https://www.homenursingseva.com/medicalattendant",
+      "https://www.homenursingseva.com/siniorcare",
+      "https://www.homenursingseva.com/pregnancycare",
+      "https://www.homenursingseva.com/babycare",
+      "https://www.homenursingseva.com/criticalcare",
+      "https://www.homenursingseva.com/patholab",
+      "https://www.homenursingseva.com/physiotherapy",
+      "https://www.homenursingseva.com/doctor",
+      "https://www.homenursingseva.com/gallery",
+      "https://www.homenursingseva.com/carrer",
+      "https://www.homenursingseva.com/enquiry"
+      ]
+}
