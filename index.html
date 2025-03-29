@@ -105,6 +105,24 @@
         }
     });
 </script>
+    <script>
+    // Function to update the og:url tag
+    function updateOgUrl() {
+        const ogUrl = document.getElementById("og-url");
+        if (ogUrl) {
+            ogUrl.setAttribute("content", window.location.href);
+        }
+    }
+
+    // Update on initial load
+    document.addEventListener("DOMContentLoaded", updateOgUrl);
+
+    // Update on history changes (for SPAs)
+    window.addEventListener("popstate", updateOgUrl);
+
+    // Update on hash changes (if using hash-based routing)
+    window.addEventListener("hashchange", updateOgUrl);
+</script>
   </head>
   <body>
     <div id="root"></div>
