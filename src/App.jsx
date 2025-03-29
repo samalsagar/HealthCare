@@ -22,8 +22,11 @@ import Carrer from './components/Carrer/Carrer.jsx'
 import Enquiry from './components/Enquiry/Enquiry.jsx'
 import BedSideAttendant from './components/MyServices/BedSideAttendant/BedSideAttendant.jsx'
 import MedicalAttendant from './components/MyServices/MedicalAttendant/MedicalAttendant.jsx'
+import { Helmet } from "react-helmet";
 
 function App() {
+  const currentPath = window.location.pathname;
+  const canonicalUrl = `https://www.homenursingseva.com${currentPath}`;
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<LayoutRoot />} basename='/'>
@@ -52,6 +55,9 @@ function App() {
     <>
      <RouterProvider router={router}/>
     </>
+    <Helmet>
+      <link rel="canonical" href={canonicalUrl} />
+    </Helmet>
   )
 }
 
