@@ -89,14 +89,35 @@
       gtag('config', 'G-9LYWLQNQZ4');
     </script>
     <script>
-        // Dynamically update canonical link based on the current route
-        document.addEventListener("DOMContentLoaded", function () {
-            const canonicalLink = document.getElementById("canonical-link");
-            const currentPath = window.location.pathname;
-            const baseUrl = "https://www.homenursingseva.com";
-            canonicalLink.href = baseUrl + currentPath;
-        });
-    </script>
+    function updateCanonical() {
+        const canonicalLink = document.getElementById("canonical-link");
+        if (canonicalLink) {
+            canonicalLink.setAttribute("href", window.location.href);
+        }
+    }
+
+    // Override pushState & replaceState to detect URL changes
+    (function(history) {
+        var pushState = history.pushState;
+        var replaceState = history.replaceState;
+
+        history.pushState = function() {
+            pushState.apply(history, arguments);
+            updateCanonical();
+        };
+
+        history.replaceState = function() {
+            replaceState.apply(history, arguments);
+            updateCanonical();
+        };
+
+        window.addEventListener("popstate", updateCanonical);
+        window.addEventListener("hashchange", updateCanonical);
+    })(window.history);
+
+    // Update canonical tag on initial page load
+    document.addEventListener("DOMContentLoaded", updateCanonical);
+</script>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
         const ogUrl = document.getElementById("og-url");
