@@ -13,7 +13,7 @@
     <meta name="description" content="24/7 Home Nursing Services in Bhubaneswar & Odisha. Expert senior, pregnancy, baby, critical care, physio, lab tests, consults & med attendants. Book Now!">
     <meta name="keywords" content="24/7 home nursing services, Bhubaneswar home nursing, Odisha healthcare, senior citizen care at home, pregnancy care services, newborn baby care, critical patient care, bedside medical attendants, affordable nursing services, physiotherapy at home, patholab tests at home, doctor consultation Bhubaneswar, certified nursing attendants, emergency home care, elderly care Odisha">
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://www.homenursingseva.com/">
+    <meta property="og:url" id="og-url" content="https://www.homenursingseva.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Home Nursing Seva">
     <meta property="og:description" content="24/7 Home Nursing Services in Bhubaneswar & Odisha. Expert senior, pregnancy, baby, critical care, physio, lab tests, consults & med attendants. Book Now!">
@@ -97,6 +97,14 @@
             canonicalLink.href = baseUrl + currentPath;
         });
     </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const ogUrl = document.getElementById("og-url");
+        if (ogUrl) {
+            ogUrl.setAttribute("content", window.location.href);
+        }
+    });
+</script>
   </head>
   <body>
     <div id="root"></div>
