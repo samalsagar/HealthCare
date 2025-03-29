@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
    <!-- <link rel="icon" href="https://www.zilliondesigns.com/images/portfolio/healthcare-hospital/iStock-471629610-Converted.png"> -->
     <link rel="icon"  type="image" href="/public/url_logo.jpg">
+    <link rel="canonical" id="canonical-link" href="https://www.homenursingseva.com/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow">
     <title>24/7 Home Nursing in Bhubaneswar | Expert Care at Home</title>
@@ -86,6 +87,15 @@
       gtag('js', new Date());
     
       gtag('config', 'G-9LYWLQNQZ4');
+    </script>
+    <script>
+        // Dynamically update canonical link based on the current route
+        document.addEventListener("DOMContentLoaded", function () {
+            const canonicalLink = document.getElementById("canonical-link");
+            const currentPath = window.location.pathname;
+            const baseUrl = "https://www.homenursingseva.com";
+            canonicalLink.href = baseUrl + currentPath;
+        });
     </script>
   </head>
   <body>
