@@ -123,9 +123,15 @@ function OurService() {
             <h3 className="service-title">{service.title}</h3>
             <p className="service-description">{service.description}</p>
             {/* Dynamic Link */}
-            <Link to={`/${service.myUrl}`} onClick={()=> scrollToTop()}>
-              <button className="service-read-more-btn">Read More</button>
-            </Link>
+            <Link 
+  to={`/${service.myUrl}`} 
+  onClick={() => scrollToTop()}
+  aria-label={`Learn more about ${service.name} services in Bhubaneswar`}
+>
+  <button className="service-read-more-btn">
+    {service.name} Services Details →
+  </button>
+</Link>
           </div>
         ))}
       </div>
