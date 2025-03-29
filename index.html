@@ -105,8 +105,7 @@
         }
     });
 </script>
-    <script>
-    // Function to update the og:url tag
+ <script>
     function updateOgUrl() {
         const ogUrl = document.getElementById("og-url");
         if (ogUrl) {
@@ -114,14 +113,27 @@
         }
     }
 
-    // Update on initial load
+    // Override pushState & replaceState to detect dynamic URL changes
+    (function(history) {
+        var pushState = history.pushState;
+        var replaceState = history.replaceState;
+
+        history.pushState = function() {
+            pushState.apply(history, arguments);
+            updateOgUrl();
+        };
+
+        history.replaceState = function() {
+            replaceState.apply(history, arguments);
+            updateOgUrl();
+        };
+
+        window.addEventListener("popstate", updateOgUrl);
+        window.addEventListener("hashchange", updateOgUrl);
+    })(window.history);
+
+    // Run on initial page load
     document.addEventListener("DOMContentLoaded", updateOgUrl);
-
-    // Update on history changes (for SPAs)
-    window.addEventListener("popstate", updateOgUrl);
-
-    // Update on hash changes (if using hash-based routing)
-    window.addEventListener("hashchange", updateOgUrl);
 </script>
   </head>
   <body>
