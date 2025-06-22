@@ -44,7 +44,7 @@ function Footer() {
               <li className="text-gray-400 text-base">Khandagiri, Bhubaneswar- 03</li>
               <li className="text-gray-400 text-base"><Link to="mailto:support@homenursingseva.com">support@homenursingseva.com</Link></li>
               
-              <li className="text-gray-400 text-base"><Link to="tel:+917735123124">+91 7735123124  </Link></li>
+              <li className="text-gray-400 text-base"><Link to="tel:+917008097970">+91 7008097970  </Link></li>
             
             </ul>
           </div>
