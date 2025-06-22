@@ -77,7 +77,7 @@ function Box() {
                 {/* "Book Now" Box */}
                
                 {/* "24x7 Customer Service" Box */}
-                <Link to="tel:+917735123124">
+                <Link to="tel:+917008097970">
                     <div className="bg-green-500 text-white p-4 rounded-md shadow-md cursor-pointer me-10">
                         <span className="rounded-full shadow-lg transition-colors duration-300">
                             <span className="text-xl">📞</span>

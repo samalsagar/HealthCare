@@ -1,6 +1,6 @@
 import React from 'react'
 import banner from '../../assets/MyServicesBanner/enquiryBanner.gif'
-import image from '../../assets/contactUs.png'
+import image from '../../assets/img.png'
 import { useState } from 'react'
 import axios from 'axios'; 
 import Swal from 'sweetalert2';
