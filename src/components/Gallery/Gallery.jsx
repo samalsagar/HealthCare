@@ -53,8 +53,12 @@ function Gallery() {
            
             <a href="#"
                 class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                <img src="https://healthyindiachronicle.in/wp-content/uploads/2017/08/nursing-1.jpg" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
+               <img 
+    src="https://t3.ftcdn.net/jpg/07/71/54/90/360_F_771549004_0eW6nl3wx5oPNa2HtP0ScbavWJkeWL9x.jpg" 
+    loading="lazy" 
+    alt="Not Found" 
+    class="absolute inset-0 w-full object-contain object-center transition duration-200 group-hover:scale-110" 
+  />
                 <div
                     class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
                 </div>
